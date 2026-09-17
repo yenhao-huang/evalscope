@@ -56,3 +56,20 @@ For a remote endpoint, use the same runner and frozen files:
 `<run-name>.json` retains public task configuration, native aggregate reports and execution status. `<run-name>-task-analysis.json` is an independent audited analysis, including per-index correctness but no model responses. Raw native predictions/reviews remain in ignored `runs/` directories. Native MCQ uses its built-in prompt/parser, so its scores are not interchangeable with the earlier adapter's prompts/scoring. QA/VQA message text and images preserve the original source preparation.
 
 References: [LLM custom datasets](https://evalscope.readthedocs.io/zh-cn/latest/advanced_guides/custom_dataset/llm.html), [multimodal custom datasets](https://evalscope.readthedocs.io/zh-cn/latest/advanced_guides/custom_dataset/vlm.html).
+
+## Use the native CLI directly
+
+The converted files work without `run_native.py`. For example:
+
+```bash
+.venv/bin/evalscope eval \
+  --model gemma4-26b-a4b --eval-type openai_api \
+  --api-url http://127.0.0.1:8092/v1 --api-key EMPTY \
+  --datasets general_mcq \
+  --dataset-args '{"general_mcq":{"local_path":"exp/my-native-run/data/general_mcq","subset_list":["mmlu"],"few_shot_num":0,"shuffle":false}}' \
+  --limit 100 --eval-batch-size 1 \
+  --generation-config '{"temperature":0,"seed":42,"max_tokens":4096,"extra_body":{"chat_template_kwargs":{"enable_thinking":false}}}' \
+  --work-dir exp/my-native-run/runs/direct-native-cli
+```
+
+Use `general_qa` with the matching directory for GSM8K/HumanEval and `general_vqa` for images. For OpsEval set `extra_params: {"multiple_correct": true}` inside its `general_mcq` dataset settings. The optional runner adds provenance and completion checks around this same public interface, not a replacement evaluation engine.

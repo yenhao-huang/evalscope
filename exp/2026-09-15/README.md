@@ -1,12 +1,12 @@
 # Gemma / EvalScope 評估 — 2026-09-15
 
-> Historical adapter-based experiment. Its runnable code is preserved at Git commit `60c1e98f`; the scripts below describe that version. Current native-interface conversions and reruns are documented in [2026-09-17](../2026-09-17-native-interfaces/README.md).
+> Historical adapter-based experiment. Its runnable code is preserved at Git commit `60c1e98f` (published identical tree: `667e878b`); the scripts below describe that version. Current native-interface conversions and reruns are documented in [2026-09-17](../2026-09-17-native-interfaces/README.md).
 
 ## 狀態
 
 - Repo: https://github.com/yenhao-huang/evalscope
 - [Phase 1 issue](https://github.com/yenhao-huang/evalscope/issues/1)：九個本地 benchmark 轉換與本機 Gemma 評估。
-- Phase 2 deployment and comparison artifacts are delivered in the dependent PR (issue #2).
+- [Phase 2 issue](https://github.com/yenhao-huang/evalscope/issues/2)：DGX Spark 與 PokemonCards 比較；已完成：遠端 280/300、本機 278/300，符合本輪 ±5 個百分點門檻。見 [Phase 2 報告](phase2-results.md)。
 - 參照：https://github.com/yenhao-huang/model-tester
 - 已完成每個 benchmark 3 題的 smoke test，僅證明流程能完成，不代表模型完整能力。
 - PokemonCards 全部 300 題已完成：278/300（92.67%），API 錯誤 0。見 [完整結果](pokemon-results.md)。
@@ -62,6 +62,21 @@ uv pip install --python .venv/bin/python -e '.[dev,perf,docs]'
 
 `run_model_tester.py` 可用 `--api-url`、`--model`、`--subsets`、`--limit`。API key 從 `EVAL_API_KEY` 讀取。重新開始必須使用新的 run-name；`--resume` 僅能使用相同資料、配置與程式版本，避免混用快取分數。程式會驗證來源 hash 與模型 ID，逐個子集寫入成績，保存失敗狀態。實際執行參數見 `<run-name>.json`；queue 狀態見 `queue-status.json`。
 
+## 遠端比較
+
+SSH 已透過 wingene@100.109.182.22 連線成功。已安裝 NVIDIA Container Toolkit、配置 CDI 並重新啟動 sandbox Docker；NVIDIA device request 與 CUDA 運算測試均通過。指定 ARM64 image 已下載，官方 Transformers 權重固定 revision 並逐檔驗證，保存至原 YAML 的掛載路徑。現有 GGUF 不用於本次 vLLM 評估。[phase2-worker.py](phase2-worker.py) 已完成模型啟動、API 就緒檢查、300 張評估與配對比較；狀態見 [phase2-progress.json](phase2-progress.json)，版本見 [remote-status.json](remote-status.json)。
+
+安裝依據：[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)、[CDI 設定](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html)；權重來源：[Google 模型](https://huggingface.co/google/gemma-4-26B-A4B-it)。
+
+執行環境就緒後，再啟動模型並核對 endpoint。評估可在本機執行並呼叫遠端 API，所以同一份凍結圖片與 scorer 可直接共用。確認 endpoint 後：
+
+```bash
+.venv/bin/python scripts/run_model_tester.py --run-name remote-pokemon-300   --subsets pokemon --limit 300 --api-url "$REMOTE_API_URL" --model "$REMOTE_MODEL_ID"
+.venv/bin/python scripts/compare_model_tester.py   --local local-pokemon-300-v1_1 --remote remote-pokemon-300 --subset pokemon
+```
+
+比較器要求實際 manifest 的 hash 與兩份執行紀錄一致，核對原始前 N 題索引、題數、prompt/decoding、scorer 版本與評分程式 SHA-256，輸出配對正確率差、正確/錯誤一致率及 seed 42 的 10,000 次 bootstrap 區間，也並列兩邊的端到端延遲、效能資料覆蓋率與執行錯誤數；未提供的效能資料標示為 null。預設「差不多」是區間落在 ±5 個百分點內（可用 `--tolerance` 修改）；這是本輪操作定義，不等於模型整體能力相等。須另揭露本機 GGUF 量化與遠端 backend/precision 差異。
+
 ## 維護與驗證
 
 - 根目錄 [AGENTS.md](../../AGENTS.md) 與 [docs/rules](../../docs/rules/git.md) 定義目錄、環境與 git 工作流程。
@@ -79,3 +94,5 @@ GSM8K v1.0 字串比對誤判 5 筆等值小數，v1.1 修正為數值等價：9
 ```
 
 重新評分會複製已完成子集的快取至新目錄，禁止推論，並要求回答檔雜湊完全不變。保留原始生成延遲與錯誤數，不能將重新評分耗時當作模型速度。資料 manifest 中 v1.0 是轉換當時版本；每次評估實際評分版本以 run identity.scoring_version 與 source_sha256 為準。原始八項批次使用 v1.0，已完成並保留；另以 local-suite-100-v1_1 保存一致版本的重評結果。所有回答快取均與原始檔案完全相同。
+
+啟動修正：原 YAML 的 0.4 記憶體比例要求 48.68 GiB，而當時可用 32.95 GiB；[獨立 override](remote-resource-override.yaml) 僅改成 0.25。實際載入為 BF16 計算、FP8 權重與 KV cache，見 [遠端模型紀錄](remote-model-provenance.json)。原 YAML 有兩個 quantization 參數，vLLM 採用最後的 fp8，啟動日誌已確認。

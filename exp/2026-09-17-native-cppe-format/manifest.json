@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "interface": "built-in general_vqa",
+  "sampling": "original source order; all 500 CPPE source rows converted",
+  "correction": "Reference answer uses comma-separated labels as requested by the unchanged prompt, instead of JSON array punctuation.",
+  "parent_manifest_sha256": "54ee922ff58f990ba643131e371b46f781b935b6899da640b072d0adb5dc4c0f",
+  "converter_sha256": "6fa49bcfa5dfb3659161ed8e92561b672db245a91b9144b2b62d7b4aac64fae7",
+  "subsets": {
+    "cppe5": {
+      "benchmark": "general_vqa",
+      "count": 500,
+      "file": "general_vqa/cppe5.jsonl",
+      "sha256": "c964842514e78a53f8798d371fd77ba80df2059bbb929c43ff4084afa8441263",
+      "sidecar": "cppe5.sidecar.jsonl",
+      "sidecar_sha256": "8db700425a48f588ddf8bb73a92417843bd41727925431f77bfeba621607ae80",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/object_detection/state.json",
+          "sha256": "df3954852f68705d1477f5d3c9fda0266453c0875313aa3d9383ac44509de7f4"
+        },
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/object_detection/dataset_info.json",
+          "sha256": "4d6c01101adc4b487130e0ab5e0a3be8ed2baace3cb50233740437e1bccca6a3"
+        },
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/object_detection/data-00000-of-00001.arrow",
+          "sha256": "047b4fa4347aec326bf6318be7078a3a4666bac913413f69874c312e7313b81d"
+        }
+      ],
+      "multiple_correct": false
+    }
+  }
+}
