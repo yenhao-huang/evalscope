@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "final_local_unique_samples": 1100,
+  "local_generated_samples_including_correction": 1200,
+  "remote_generated_samples": 300,
+  "framework_tree": "4524e9920f9184297763adbaa141ca7e2b58db5b",
+  "framework_diff_from_origin_main": [],
+  "custom_tests": 22,
+  "upstream_ci_lite_tests": 1,
+  "local_selected_subsets": {
+    "mmlu": {
+      "analysis": "local-native-1100-task-analysis.json",
+      "n": 100,
+      "correct": 94,
+      "metric_origin": "native_general_mcq"
+    },
+    "geo_mmlu": {
+      "analysis": "local-native-1100-task-analysis.json",
+      "n": 100,
+      "correct": 90,
+      "metric_origin": "native_general_mcq"
+    },
+    "law_mmlu": {
+      "analysis": "local-native-1100-task-analysis.json",
+      "n": 100,
+      "correct": 69,
+      "metric_origin": "native_general_mcq"
+    },
+    "opseval": {
+      "analysis": "local-native-1100-task-analysis.json",
+      "n": 100,
+      "correct": 49,
+      "metric_origin": "native_general_mcq"
+    },
+    "gsm8k": {
+      "analysis": "local-native-1100-task-analysis.json",
+      "n": 100,
+      "correct": 97,
+      "metric_origin": "independent_postprocessing"
+    },
+    "humaneval": {
+      "analysis": "local-native-1100-task-analysis.json",
+      "n": 100,
+      "correct": 94,
+      "metric_origin": "independent_postprocessing"
+    },
+    "pokemon": {
+      "analysis": "local-native-1100-task-analysis.json",
+      "n": 300,
+      "correct": 278,
+      "metric_origin": "independent_postprocessing"
+    },
+    "cifar10": {
+      "analysis": "local-native-1100-task-analysis.json",
+      "n": 100,
+      "correct": 92,
+      "metric_origin": "independent_postprocessing"
+    },
+    "cppe5": {
+      "analysis": "../2026-09-17-native-cppe-format/local-native-cppe-100-task-analysis.json",
+      "n": 100,
+      "correct": 48,
+      "metric_origin": "independent_postprocessing"
+    }
+  },
+  "cppe_reference_correction": {
+    "source_sidecar_unchanged": true,
+    "fresh_api_response_ids_disjoint": true,
+    "prediction_text_agreement": 100
+  },
+  "audits": {
+    "exp/2026-09-17-native-interfaces/local-native-1100-task-analysis.json": "5fad38f6674133e120687156c3a4af7b8d9a8bc3431107c86449beb305dac586",
+    "exp/2026-09-17-native-interfaces/remote-native-pokemon-300-task-analysis.json": "a43a30906c77c691bda15e670e2e6d3acc3d66a98e1eca0ce25bda7381ef0692",
+    "exp/2026-09-17-native-cppe-format/local-native-cppe-100-task-analysis.json": "b493ddfe77d57ceeb0a1e3c568a3e03c0543403f63fabd25499a429d04485f0b"
+  }
+}

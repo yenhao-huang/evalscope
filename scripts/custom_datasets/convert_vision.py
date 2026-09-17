@@ -8,6 +8,13 @@ from pathlib import Path
 from source_data import load_arrow, vision_sample
 
 
+def format_answer(task: str, gold: object) -> str:
+    """Match the requested output format so native lexical metrics stay meaningful."""
+    if task == 'cppe5':
+        return ', '.join(gold)
+    return gold if isinstance(gold, str) else json.dumps(gold, ensure_ascii=False, sort_keys=True)
+
+
 def convert(dataset_root: Path, output: Path, image_cache: Path | None = None) -> dict:
     """Freeze original images and retain task targets in independent sidecars."""
     from convert_all import write_dataset
@@ -29,7 +36,7 @@ def convert(dataset_root: Path, output: Path, image_cache: Path | None = None) -
         for index, row in enumerate(rows):
             original = vision_sample(task, row, features, index, cache)
             gold = json.loads(original['target'])
-            answer = gold if isinstance(gold, str) else json.dumps(gold, ensure_ascii=False, sort_keys=True)
+            answer = format_answer(task, gold)
             pairs.append(
                 (
                     {'messages': original['messages'], 'answer': answer},

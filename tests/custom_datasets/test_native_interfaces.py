@@ -115,3 +115,12 @@ def test_code_report_isolation(tmp_path: Path) -> None:
     assert not execute_code(f'open({str(tmp_path / "forbidden")!r}, "w").write("bad")')
     assert not execute_code(f'open({str(ROOT / "AGENTS.md")!r}).read()')
     assert not execute_code('import socket; socket.socket().connect(("127.0.0.1", 80))')
+
+
+def test_cppe_reference_matches_native_metric_format() -> None:
+    from convert_vision import format_answer
+    target = format_answer('cppe5', ['Coverall', 'Mask'])
+    adapter = get_benchmark('general_vqa', {'metric_list': ['Rouge']})
+    score = adapter.match_score('Coverall, Mask', 'Coverall, Mask', target, None)
+    assert score.value['Rouge-L-R'] == 1.0
+    assert not score.metadata.get('metric_errors')

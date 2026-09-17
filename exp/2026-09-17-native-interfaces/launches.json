@@ -1,0 +1,30 @@
+[
+  {
+    "pid": 80349,
+    "command": [
+      ".venv/bin/python",
+      "scripts/custom_datasets/run_native.py",
+      "--exp",
+      "exp/2026-09-17-native-interfaces",
+      "--run-name",
+      "local-native-1100"
+    ]
+  },
+  {
+    "pid": 80350,
+    "command": [
+      ".venv/bin/python",
+      "scripts/custom_datasets/run_native.py",
+      "--exp",
+      "exp/2026-09-17-native-interfaces",
+      "--run-name",
+      "remote-native-pokemon-300",
+      "--subsets",
+      "pokemon",
+      "--api-url",
+      "http://100.109.182.22:3335/v1",
+      "--model",
+      "/workspace/llm_model"
+    ]
+  }
+]
