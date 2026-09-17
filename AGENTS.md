@@ -180,4 +180,13 @@ pytest tests/cli/test_all.py::TestRun::test_ci_lite -v -s -p no:warnings
 
 This fork maintains reproducible local and remote model evaluation. Before work, read `docs/feature-list.md`. Read `docs/rules/filetree.md` before directory changes, `docs/rules/environment.md` before environment or service changes, and `docs/rules/git.md` before git operations.
 
-All experiments MUST live under `exp/<exp-name>/`; the initial experiment is `exp/2026-09-15/`. The only project virtual environment is root `.venv/`. Follow the git rules in docs, preserve all upstream requirements above, and update feature status and experiment evidence as work progresses.
+All experiments MUST live under `exp/<exp-name>/`; use a new dated directory for each independent run. The only project virtual environment is root `.venv/`. Follow the git rules in docs, preserve all upstream requirements above, and update feature status and experiment evidence as work progresses.
+
+## Existing-interface-only evaluation policy
+
+- Build evaluations on EvalScope's existing, documented interfaces: `TaskConfig`, `run_task`, the CLI, `dataset_args.local_path`, and built-in dataset formats such as `general_mcq`, `general_qa`, and `general_vqa`.
+- Do not modify, refactor, monkey-patch, or replace upstream functions under `evalscope/` to run personal evaluations. Do not add a custom benchmark adapter when an existing dataset interface can express the input.
+- Put source-to-native-format converters in `scripts/custom_datasets/convert_<name>.py`. Keep dataset-specific preparation, configuration, validation, and optional report post-processing outside framework internals.
+- If a required metric is unavailable through an existing interface, document the limitation. Any independent post-processing must be labeled separately from native EvalScope metrics; never present BLEU/ROUGE as task accuracy or silently change the scoring definition.
+- A framework extension or internal change requires a separate, explicit user request. Stop that part and explain the missing interface instead of changing internals as a workaround.
+- Save reruns under a new `exp/<exp-name>/` and fresh run name. Preserve historical results and record native dataset format, prompts, metrics, sample selection, model configuration, and source hashes.

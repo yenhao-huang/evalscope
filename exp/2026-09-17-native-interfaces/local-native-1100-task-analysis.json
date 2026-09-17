@@ -1,0 +1,6125 @@
+{
+  "run_name": "local-native-1100",
+  "run_sha256": "2d7e3e42f96ec718600118fae65f94ccd88f742e80faf60e5ea732235ac2671d",
+  "status": "audited",
+  "task_metric_version": "v1.1",
+  "task_metric_sha256": "552181bf68c49cdad1716349f86ddf292d0634c4694b1a7111521f90ed266361",
+  "analyzer_sha256": "a5d97cccdeb58a98a54a07660fc5c3a40af240441f89822950df22384fdc9ef9",
+  "note": "MCQ accuracy is native. Other task accuracies are independent post-processing, not EvalScope metrics.",
+  "subsets": {
+    "mmlu": {
+      "benchmark": "general_mcq",
+      "n": 100,
+      "correct": 94,
+      "task_accuracy": 0.94,
+      "task_metric_origin": "native_general_mcq",
+      "scores_by_source_index": {
+        "0": 1.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 0.0,
+        "8": 1.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 1.0,
+        "12": 1.0,
+        "13": 1.0,
+        "14": 1.0,
+        "15": 1.0,
+        "16": 1.0,
+        "17": 1.0,
+        "18": 1.0,
+        "19": 1.0,
+        "20": 1.0,
+        "21": 1.0,
+        "22": 1.0,
+        "23": 1.0,
+        "24": 0.0,
+        "25": 1.0,
+        "26": 1.0,
+        "27": 1.0,
+        "28": 1.0,
+        "29": 1.0,
+        "30": 1.0,
+        "31": 1.0,
+        "32": 1.0,
+        "33": 1.0,
+        "34": 0.0,
+        "35": 1.0,
+        "36": 1.0,
+        "37": 1.0,
+        "38": 1.0,
+        "39": 1.0,
+        "40": 1.0,
+        "41": 1.0,
+        "42": 1.0,
+        "43": 1.0,
+        "44": 1.0,
+        "45": 1.0,
+        "46": 1.0,
+        "47": 1.0,
+        "48": 1.0,
+        "49": 1.0,
+        "50": 1.0,
+        "51": 1.0,
+        "52": 1.0,
+        "53": 1.0,
+        "54": 1.0,
+        "55": 1.0,
+        "56": 1.0,
+        "57": 1.0,
+        "58": 1.0,
+        "59": 1.0,
+        "60": 1.0,
+        "61": 1.0,
+        "62": 0.0,
+        "63": 1.0,
+        "64": 1.0,
+        "65": 1.0,
+        "66": 1.0,
+        "67": 1.0,
+        "68": 1.0,
+        "69": 1.0,
+        "70": 1.0,
+        "71": 1.0,
+        "72": 1.0,
+        "73": 1.0,
+        "74": 1.0,
+        "75": 0.0,
+        "76": 1.0,
+        "77": 1.0,
+        "78": 1.0,
+        "79": 1.0,
+        "80": 1.0,
+        "81": 1.0,
+        "82": 1.0,
+        "83": 1.0,
+        "84": 1.0,
+        "85": 1.0,
+        "86": 1.0,
+        "87": 1.0,
+        "88": 1.0,
+        "89": 1.0,
+        "90": 1.0,
+        "91": 1.0,
+        "92": 1.0,
+        "93": 1.0,
+        "94": 0.0,
+        "95": 1.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 1.0,
+        "99": 1.0
+      },
+      "native_metrics_mean": {
+        "accuracy": 0.94
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.94,
+          "macro_score": 0.94,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.94,
+              "macro_score": 0.94,
+              "subsets": [
+                {
+                  "name": "mmlu",
+                  "score": 0.94,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.accuracy.ratio",
+            "metric_name": "Accuracy",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "mmlu": {
+            "requested": 100,
+            "succeeded": 100,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 100,
+          "latency": {
+            "mean": 15.031978,
+            "std": 10.054817,
+            "min": 0.736656,
+            "25%": 9.106101,
+            "50%": 15.029284,
+            "75%": 20.45655,
+            "90%": 25.736656,
+            "99%": 44.728265,
+            "max": 49.170319
+          },
+          "throughput": {
+            "avg_output_tps": 21.57,
+            "avg_req_ps": 0.0665
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 128.85,
+              "std": 17.576025,
+              "min": 98.0,
+              "25%": 114.75,
+              "50%": 126.5,
+              "75%": 142.5,
+              "90%": 153.1,
+              "99%": 161.17,
+              "max": 178.0
+            },
+            "output_tokens": {
+              "mean": 324.2,
+              "std": 224.641578,
+              "min": 4.0,
+              "25%": 191.75,
+              "50%": 321.5,
+              "75%": 450.0,
+              "90%": 567.3,
+              "99%": 966.16,
+              "max": 1081.0
+            },
+            "total_tokens": {
+              "mean": 453.05,
+              "std": 227.055254,
+              "min": 103.0,
+              "25%": 314.25,
+              "50%": 446.0,
+              "75%": 575.5,
+              "90%": 694.2,
+              "99%": 1115.9,
+              "max": 1205.0
+            },
+            "total_input_tokens": 12885,
+            "total_output_tokens": 32420,
+            "total_tokens_count": 45305
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 100,
+          "total_requests": 100
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-1100/mmlu/reviews/gemma4-26b-a4b/general_mcq_mmlu.jsonl": "ef29547e422cbc6d144dd1cc01a5da7c1b9d89be23119b799a47687a3bd9a3a7"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    },
+    "geo_mmlu": {
+      "benchmark": "general_mcq",
+      "n": 100,
+      "correct": 90,
+      "task_accuracy": 0.9,
+      "task_metric_origin": "native_general_mcq",
+      "scores_by_source_index": {
+        "0": 0.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 1.0,
+        "6": 0.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 1.0,
+        "12": 1.0,
+        "13": 1.0,
+        "14": 1.0,
+        "15": 1.0,
+        "16": 1.0,
+        "17": 1.0,
+        "18": 1.0,
+        "19": 1.0,
+        "20": 1.0,
+        "21": 1.0,
+        "22": 1.0,
+        "23": 1.0,
+        "24": 1.0,
+        "25": 1.0,
+        "26": 1.0,
+        "27": 0.0,
+        "28": 1.0,
+        "29": 1.0,
+        "30": 1.0,
+        "31": 0.0,
+        "32": 1.0,
+        "33": 1.0,
+        "34": 1.0,
+        "35": 1.0,
+        "36": 1.0,
+        "37": 1.0,
+        "38": 0.0,
+        "39": 1.0,
+        "40": 1.0,
+        "41": 1.0,
+        "42": 1.0,
+        "43": 1.0,
+        "44": 1.0,
+        "45": 1.0,
+        "46": 1.0,
+        "47": 1.0,
+        "48": 1.0,
+        "49": 1.0,
+        "50": 1.0,
+        "51": 1.0,
+        "52": 1.0,
+        "53": 0.0,
+        "54": 1.0,
+        "55": 0.0,
+        "56": 1.0,
+        "57": 1.0,
+        "58": 1.0,
+        "59": 1.0,
+        "60": 0.0,
+        "61": 1.0,
+        "62": 1.0,
+        "63": 1.0,
+        "64": 1.0,
+        "65": 1.0,
+        "66": 1.0,
+        "67": 1.0,
+        "68": 1.0,
+        "69": 1.0,
+        "70": 1.0,
+        "71": 1.0,
+        "72": 1.0,
+        "73": 1.0,
+        "74": 1.0,
+        "75": 1.0,
+        "76": 1.0,
+        "77": 1.0,
+        "78": 1.0,
+        "79": 1.0,
+        "80": 1.0,
+        "81": 1.0,
+        "82": 1.0,
+        "83": 1.0,
+        "84": 1.0,
+        "85": 1.0,
+        "86": 1.0,
+        "87": 1.0,
+        "88": 1.0,
+        "89": 1.0,
+        "90": 1.0,
+        "91": 1.0,
+        "92": 1.0,
+        "93": 1.0,
+        "94": 1.0,
+        "95": 1.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 1.0,
+        "99": 1.0
+      },
+      "native_metrics_mean": {
+        "accuracy": 0.9
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.9,
+          "macro_score": 0.9,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.9,
+              "macro_score": 0.9,
+              "subsets": [
+                {
+                  "name": "geo_mmlu",
+                  "score": 0.9,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.accuracy.ratio",
+            "metric_name": "Accuracy",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "geo_mmlu": {
+            "requested": 100,
+            "succeeded": 100,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 100,
+          "latency": {
+            "mean": 1.335635,
+            "std": 5.963953,
+            "min": 0.651251,
+            "25%": 0.697405,
+            "50%": 0.734571,
+            "75%": 0.758409,
+            "90%": 0.818567,
+            "99%": 1.579542,
+            "max": 60.376256
+          },
+          "throughput": {
+            "avg_output_tps": 12.71,
+            "avg_req_ps": 0.7487
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 112.19,
+              "std": 16.59055,
+              "min": 91.0,
+              "25%": 101.0,
+              "50%": 108.0,
+              "75%": 117.0,
+              "90%": 135.0,
+              "99%": 153.52,
+              "max": 205.0
+            },
+            "output_tokens": {
+              "mean": 16.97,
+              "std": 129.7,
+              "min": 4.0,
+              "25%": 4.0,
+              "50%": 4.0,
+              "75%": 4.0,
+              "90%": 4.0,
+              "99%": 16.97,
+              "max": 1301.0
+            },
+            "total_tokens": {
+              "mean": 129.16,
+              "std": 132.232327,
+              "min": 95.0,
+              "25%": 105.0,
+              "50%": 112.0,
+              "75%": 121.0,
+              "90%": 139.0,
+              "99%": 221.19,
+              "max": 1428.0
+            },
+            "total_input_tokens": 11219,
+            "total_output_tokens": 1697,
+            "total_tokens_count": 12916
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 100,
+          "total_requests": 100
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-1100/geo_mmlu/reviews/gemma4-26b-a4b/general_mcq_geo_mmlu.jsonl": "08aa65af9c5477cc120afc7562431dbda0c241c24414df0295c72d500f0cc806"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    },
+    "law_mmlu": {
+      "benchmark": "general_mcq",
+      "n": 100,
+      "correct": 69,
+      "task_accuracy": 0.69,
+      "task_metric_origin": "native_general_mcq",
+      "scores_by_source_index": {
+        "0": 1.0,
+        "1": 0.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 1.0,
+        "9": 0.0,
+        "10": 1.0,
+        "11": 1.0,
+        "12": 1.0,
+        "13": 1.0,
+        "14": 1.0,
+        "15": 1.0,
+        "16": 1.0,
+        "17": 0.0,
+        "18": 1.0,
+        "19": 1.0,
+        "20": 1.0,
+        "21": 1.0,
+        "22": 1.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 1.0,
+        "26": 0.0,
+        "27": 1.0,
+        "28": 1.0,
+        "29": 0.0,
+        "30": 0.0,
+        "31": 1.0,
+        "32": 1.0,
+        "33": 1.0,
+        "34": 0.0,
+        "35": 1.0,
+        "36": 0.0,
+        "37": 0.0,
+        "38": 0.0,
+        "39": 1.0,
+        "40": 1.0,
+        "41": 0.0,
+        "42": 1.0,
+        "43": 1.0,
+        "44": 1.0,
+        "45": 0.0,
+        "46": 1.0,
+        "47": 1.0,
+        "48": 1.0,
+        "49": 1.0,
+        "50": 1.0,
+        "51": 0.0,
+        "52": 1.0,
+        "53": 1.0,
+        "54": 1.0,
+        "55": 0.0,
+        "56": 1.0,
+        "57": 0.0,
+        "58": 0.0,
+        "59": 1.0,
+        "60": 1.0,
+        "61": 0.0,
+        "62": 0.0,
+        "63": 1.0,
+        "64": 1.0,
+        "65": 1.0,
+        "66": 0.0,
+        "67": 0.0,
+        "68": 0.0,
+        "69": 1.0,
+        "70": 1.0,
+        "71": 1.0,
+        "72": 1.0,
+        "73": 1.0,
+        "74": 1.0,
+        "75": 0.0,
+        "76": 0.0,
+        "77": 1.0,
+        "78": 0.0,
+        "79": 1.0,
+        "80": 0.0,
+        "81": 1.0,
+        "82": 1.0,
+        "83": 1.0,
+        "84": 1.0,
+        "85": 0.0,
+        "86": 1.0,
+        "87": 1.0,
+        "88": 1.0,
+        "89": 1.0,
+        "90": 1.0,
+        "91": 1.0,
+        "92": 1.0,
+        "93": 1.0,
+        "94": 1.0,
+        "95": 0.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 1.0,
+        "99": 1.0
+      },
+      "native_metrics_mean": {
+        "accuracy": 0.69
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.69,
+          "macro_score": 0.69,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.69,
+              "macro_score": 0.69,
+              "subsets": [
+                {
+                  "name": "law_mmlu",
+                  "score": 0.69,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.accuracy.ratio",
+            "metric_name": "Accuracy",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "law_mmlu": {
+            "requested": 100,
+            "succeeded": 100,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 100,
+          "latency": {
+            "mean": 2.816782,
+            "std": 5.881442,
+            "min": 0.758112,
+            "25%": 1.132029,
+            "50%": 1.348905,
+            "75%": 1.637866,
+            "90%": 1.976759,
+            "99%": 30.100314,
+            "max": 35.132853
+          },
+          "throughput": {
+            "avg_output_tps": 12.39,
+            "avg_req_ps": 0.355
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 322.97,
+              "std": 117.313829,
+              "min": 102.0,
+              "25%": 247.0,
+              "50%": 306.5,
+              "75%": 395.5,
+              "90%": 456.3,
+              "99%": 669.38,
+              "max": 707.0
+            },
+            "output_tokens": {
+              "mean": 34.89,
+              "std": 127.776786,
+              "min": 4.0,
+              "25%": 4.0,
+              "50%": 4.0,
+              "75%": 4.0,
+              "90%": 4.0,
+              "99%": 650.67,
+              "max": 717.0
+            },
+            "total_tokens": {
+              "mean": 357.86,
+              "std": 193.845352,
+              "min": 106.0,
+              "25%": 252.75,
+              "50%": 315.0,
+              "75%": 405.5,
+              "90%": 535.0,
+              "99%": 977.94,
+              "max": 1368.0
+            },
+            "total_input_tokens": 32297,
+            "total_output_tokens": 3489,
+            "total_tokens_count": 35786
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 100,
+          "total_requests": 100
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-1100/law_mmlu/reviews/gemma4-26b-a4b/general_mcq_law_mmlu.jsonl": "5270a8f8cea5789d0ad28d63174dfcc0353e18c6ab9d7e9e08362f13db5caa5e"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    },
+    "opseval": {
+      "benchmark": "general_mcq",
+      "n": 100,
+      "correct": 49,
+      "task_accuracy": 0.49,
+      "task_metric_origin": "native_general_mcq",
+      "scores_by_source_index": {
+        "0": 1.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 1.0,
+        "4": 0.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 0.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 0.0,
+        "12": 1.0,
+        "13": 0.0,
+        "14": 1.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 1.0,
+        "19": 1.0,
+        "20": 0.0,
+        "21": 1.0,
+        "22": 0.0,
+        "23": 1.0,
+        "24": 1.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0,
+        "28": 1.0,
+        "29": 1.0,
+        "30": 1.0,
+        "31": 0.0,
+        "32": 1.0,
+        "33": 1.0,
+        "34": 1.0,
+        "35": 0.0,
+        "36": 1.0,
+        "37": 0.0,
+        "38": 1.0,
+        "39": 1.0,
+        "40": 0.0,
+        "41": 0.0,
+        "42": 0.0,
+        "43": 0.0,
+        "44": 0.0,
+        "45": 0.0,
+        "46": 1.0,
+        "47": 0.0,
+        "48": 1.0,
+        "49": 0.0,
+        "50": 0.0,
+        "51": 0.0,
+        "52": 1.0,
+        "53": 0.0,
+        "54": 0.0,
+        "55": 0.0,
+        "56": 0.0,
+        "57": 0.0,
+        "58": 0.0,
+        "59": 1.0,
+        "60": 0.0,
+        "61": 0.0,
+        "62": 0.0,
+        "63": 0.0,
+        "64": 1.0,
+        "65": 0.0,
+        "66": 0.0,
+        "67": 1.0,
+        "68": 0.0,
+        "69": 1.0,
+        "70": 0.0,
+        "71": 0.0,
+        "72": 1.0,
+        "73": 1.0,
+        "74": 1.0,
+        "75": 0.0,
+        "76": 1.0,
+        "77": 1.0,
+        "78": 1.0,
+        "79": 1.0,
+        "80": 1.0,
+        "81": 1.0,
+        "82": 0.0,
+        "83": 0.0,
+        "84": 1.0,
+        "85": 0.0,
+        "86": 1.0,
+        "87": 1.0,
+        "88": 1.0,
+        "89": 1.0,
+        "90": 0.0,
+        "91": 1.0,
+        "92": 0.0,
+        "93": 0.0,
+        "94": 1.0,
+        "95": 0.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 0.0,
+        "99": 1.0
+      },
+      "native_metrics_mean": {
+        "accuracy": 0.49
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.49,
+          "macro_score": 0.49,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.49,
+              "macro_score": 0.49,
+              "subsets": [
+                {
+                  "name": "opseval",
+                  "score": 0.49,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.accuracy.ratio",
+            "metric_name": "Accuracy",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "opseval": {
+            "requested": 100,
+            "succeeded": 100,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 100,
+          "latency": {
+            "mean": 7.145444,
+            "std": 10.499171,
+            "min": 0.653587,
+            "25%": 0.747222,
+            "50%": 2.202367,
+            "75%": 11.368475,
+            "90%": 16.121319,
+            "99%": 26.255104,
+            "max": 88.466229
+          },
+          "throughput": {
+            "avg_output_tps": 20.65,
+            "avg_req_ps": 0.1399
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 134.8,
+              "std": 33.067119,
+              "min": 96.0,
+              "25%": 113.25,
+              "50%": 128.5,
+              "75%": 144.0,
+              "90%": 172.3,
+              "99%": 260.11,
+              "max": 271.0
+            },
+            "output_tokens": {
+              "mean": 147.53,
+              "std": 233.19669,
+              "min": 4.0,
+              "25%": 4.0,
+              "50%": 37.5,
+              "75%": 245.0,
+              "90%": 350.9,
+              "99%": 576.7,
+              "max": 1933.0
+            },
+            "total_tokens": {
+              "mean": 282.33,
+              "std": 244.324261,
+              "min": 100.0,
+              "25%": 117.25,
+              "50%": 205.5,
+              "75%": 400.5,
+              "90%": 518.3,
+              "99%": 737.3,
+              "max": 2054.0
+            },
+            "total_input_tokens": 13480,
+            "total_output_tokens": 14753,
+            "total_tokens_count": 28233
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 100,
+          "total_requests": 100
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-1100/opseval/reviews/gemma4-26b-a4b/general_mcq_opseval.jsonl": "3645859ca44274296e5ce5eb9c4ac229bb475bfcc4986f033487a02fab79d840"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    },
+    "gsm8k": {
+      "benchmark": "general_qa",
+      "n": 100,
+      "correct": 97,
+      "task_accuracy": 0.97,
+      "task_metric_origin": "independent_postprocessing",
+      "scores_by_source_index": {
+        "0": 1.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 1.0,
+        "12": 0.0,
+        "13": 1.0,
+        "14": 1.0,
+        "15": 1.0,
+        "16": 1.0,
+        "17": 1.0,
+        "18": 1.0,
+        "19": 1.0,
+        "20": 1.0,
+        "21": 1.0,
+        "22": 1.0,
+        "23": 1.0,
+        "24": 1.0,
+        "25": 1.0,
+        "26": 1.0,
+        "27": 1.0,
+        "28": 1.0,
+        "29": 1.0,
+        "30": 1.0,
+        "31": 1.0,
+        "32": 1.0,
+        "33": 1.0,
+        "34": 1.0,
+        "35": 1.0,
+        "36": 1.0,
+        "37": 1.0,
+        "38": 1.0,
+        "39": 1.0,
+        "40": 1.0,
+        "41": 1.0,
+        "42": 1.0,
+        "43": 1.0,
+        "44": 1.0,
+        "45": 1.0,
+        "46": 1.0,
+        "47": 1.0,
+        "48": 1.0,
+        "49": 1.0,
+        "50": 1.0,
+        "51": 1.0,
+        "52": 1.0,
+        "53": 1.0,
+        "54": 1.0,
+        "55": 1.0,
+        "56": 1.0,
+        "57": 1.0,
+        "58": 1.0,
+        "59": 1.0,
+        "60": 1.0,
+        "61": 1.0,
+        "62": 0.0,
+        "63": 1.0,
+        "64": 1.0,
+        "65": 1.0,
+        "66": 1.0,
+        "67": 1.0,
+        "68": 1.0,
+        "69": 1.0,
+        "70": 1.0,
+        "71": 1.0,
+        "72": 1.0,
+        "73": 1.0,
+        "74": 1.0,
+        "75": 1.0,
+        "76": 1.0,
+        "77": 1.0,
+        "78": 1.0,
+        "79": 1.0,
+        "80": 1.0,
+        "81": 1.0,
+        "82": 1.0,
+        "83": 1.0,
+        "84": 1.0,
+        "85": 0.0,
+        "86": 1.0,
+        "87": 1.0,
+        "88": 1.0,
+        "89": 1.0,
+        "90": 1.0,
+        "91": 1.0,
+        "92": 1.0,
+        "93": 1.0,
+        "94": 1.0,
+        "95": 1.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 1.0,
+        "99": 1.0
+      },
+      "native_metrics_mean": {
+        "bleu-1": 0.004784710740557063,
+        "bleu-2": 2.113820165581901e-308,
+        "bleu-3": 2.113820165581901e-308,
+        "bleu-4": 2.113820165581901e-308,
+        "Rouge-1-R": 0.92,
+        "Rouge-1-P": 0.012578598878356466,
+        "Rouge-1-F": 0.02479859048011869,
+        "Rouge-2-R": 0.0,
+        "Rouge-2-P": 0.0,
+        "Rouge-2-F": 0.0,
+        "Rouge-L-R": 0.92,
+        "Rouge-L-P": 0.0068791452918951,
+        "Rouge-L-F": 0.013647350873731194
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0048,
+          "macro_score": 0.0048,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0048,
+              "macro_score": 0.0048,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0048,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 3
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 4
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.92,
+          "macro_score": 0.92,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.92,
+              "macro_score": 0.92,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.92,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0126,
+          "macro_score": 0.0126,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0126,
+              "macro_score": 0.0126,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0126,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0248,
+          "macro_score": 0.0248,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0248,
+              "macro_score": 0.0248,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0248,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "recall",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.92,
+          "macro_score": 0.92,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.92,
+              "macro_score": 0.92,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.92,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "precision",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0069,
+          "macro_score": 0.0069,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0069,
+              "macro_score": 0.0069,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0069,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "f1",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0136,
+          "macro_score": 0.0136,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0136,
+              "macro_score": 0.0136,
+              "subsets": [
+                {
+                  "name": "gsm8k",
+                  "score": 0.0136,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "gsm8k": {
+            "requested": 100,
+            "succeeded": 100,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 100,
+          "latency": {
+            "mean": 13.579203,
+            "std": 6.34367,
+            "min": 6.209141,
+            "25%": 9.789738,
+            "50%": 12.381338,
+            "75%": 15.235425,
+            "90%": 19.095276,
+            "99%": 44.232273,
+            "max": 47.836337
+          },
+          "throughput": {
+            "avg_output_tps": 21.62,
+            "avg_req_ps": 0.0736
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 105.82,
+              "std": 21.568954,
+              "min": 71.0,
+              "25%": 89.75,
+              "50%": 101.5,
+              "75%": 116.0,
+              "90%": 135.4,
+              "99%": 170.02,
+              "max": 172.0
+            },
+            "output_tokens": {
+              "mean": 293.54,
+              "std": 141.12552,
+              "min": 126.0,
+              "25%": 214.0,
+              "50%": 267.5,
+              "75%": 329.0,
+              "90%": 421.7,
+              "99%": 975.78,
+              "max": 1053.0
+            },
+            "total_tokens": {
+              "mean": 399.36,
+              "std": 149.774343,
+              "min": 204.0,
+              "25%": 305.5,
+              "50%": 372.0,
+              "75%": 452.5,
+              "90%": 536.0,
+              "99%": 1089.0,
+              "max": 1188.0
+            },
+            "total_input_tokens": 10582,
+            "total_output_tokens": 29354,
+            "total_tokens_count": 39936
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 100,
+          "total_requests": 100
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-1100/gsm8k/reviews/gemma4-26b-a4b/general_qa_gsm8k.jsonl": "ea07826d76d8290d2c9521bc2466c279547dd942742e0151b1e5a62e460caf7a"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    },
+    "humaneval": {
+      "benchmark": "general_qa",
+      "n": 100,
+      "correct": 94,
+      "task_accuracy": 0.94,
+      "task_metric_origin": "independent_postprocessing",
+      "scores_by_source_index": {
+        "0": 1.0,
+        "1": 0.0,
+        "2": 1.0,
+        "3": 0.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 0.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 1.0,
+        "12": 1.0,
+        "13": 1.0,
+        "14": 1.0,
+        "15": 1.0,
+        "16": 1.0,
+        "17": 1.0,
+        "18": 1.0,
+        "19": 1.0,
+        "20": 1.0,
+        "21": 1.0,
+        "22": 1.0,
+        "23": 1.0,
+        "24": 1.0,
+        "25": 1.0,
+        "26": 1.0,
+        "27": 1.0,
+        "28": 1.0,
+        "29": 1.0,
+        "30": 1.0,
+        "31": 1.0,
+        "32": 0.0,
+        "33": 1.0,
+        "34": 1.0,
+        "35": 1.0,
+        "36": 1.0,
+        "37": 1.0,
+        "38": 0.0,
+        "39": 1.0,
+        "40": 1.0,
+        "41": 1.0,
+        "42": 1.0,
+        "43": 1.0,
+        "44": 1.0,
+        "45": 1.0,
+        "46": 1.0,
+        "47": 1.0,
+        "48": 1.0,
+        "49": 1.0,
+        "50": 1.0,
+        "51": 1.0,
+        "52": 1.0,
+        "53": 1.0,
+        "54": 1.0,
+        "55": 1.0,
+        "56": 1.0,
+        "57": 1.0,
+        "58": 1.0,
+        "59": 1.0,
+        "60": 1.0,
+        "61": 1.0,
+        "62": 1.0,
+        "63": 1.0,
+        "64": 1.0,
+        "65": 1.0,
+        "66": 1.0,
+        "67": 1.0,
+        "68": 1.0,
+        "69": 1.0,
+        "70": 1.0,
+        "71": 1.0,
+        "72": 1.0,
+        "73": 1.0,
+        "74": 1.0,
+        "75": 1.0,
+        "76": 1.0,
+        "77": 1.0,
+        "78": 1.0,
+        "79": 1.0,
+        "80": 1.0,
+        "81": 1.0,
+        "82": 1.0,
+        "83": 1.0,
+        "84": 0.0,
+        "85": 1.0,
+        "86": 1.0,
+        "87": 1.0,
+        "88": 1.0,
+        "89": 1.0,
+        "90": 1.0,
+        "91": 1.0,
+        "92": 1.0,
+        "93": 1.0,
+        "94": 1.0,
+        "95": 1.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 1.0,
+        "99": 1.0
+      },
+      "native_metrics_mean": {
+        "bleu-1": 0.34352422119208403,
+        "bleu-2": 0.21730466056013334,
+        "bleu-3": 0.15527703856275862,
+        "bleu-4": 0.11742230387262831,
+        "Rouge-1-R": 0.5827983039462626,
+        "Rouge-1-P": 0.2898190983150404,
+        "Rouge-1-F": 0.34555691955690876,
+        "Rouge-2-R": 0.3284370453876941,
+        "Rouge-2-P": 0.15343830238233636,
+        "Rouge-2-F": 0.179303026852566,
+        "Rouge-L-R": 0.5264561156742872,
+        "Rouge-L-P": 0.25176477044141093,
+        "Rouge-L-F": 0.29821813916292694
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.3435,
+          "macro_score": 0.3435,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.3435,
+              "macro_score": 0.3435,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.3435,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.2173,
+          "macro_score": 0.2173,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.2173,
+              "macro_score": 0.2173,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.2173,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 3
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.1553,
+          "macro_score": 0.1553,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.1553,
+              "macro_score": 0.1553,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.1553,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 4
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.1174,
+          "macro_score": 0.1174,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.1174,
+              "macro_score": 0.1174,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.1174,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.5828,
+          "macro_score": 0.5828,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.5828,
+              "macro_score": 0.5828,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.5828,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.2898,
+          "macro_score": 0.2898,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.2898,
+              "macro_score": 0.2898,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.2898,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.3456,
+          "macro_score": 0.3456,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.3456,
+              "macro_score": 0.3456,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.3456,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.3284,
+          "macro_score": 0.3284,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.3284,
+              "macro_score": 0.3284,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.3284,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.1534,
+          "macro_score": 0.1534,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.1534,
+              "macro_score": 0.1534,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.1534,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.1793,
+          "macro_score": 0.1793,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.1793,
+              "macro_score": 0.1793,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.1793,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "recall",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.5265,
+          "macro_score": 0.5265,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.5265,
+              "macro_score": 0.5265,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.5265,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "precision",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.2518,
+          "macro_score": 0.2518,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.2518,
+              "macro_score": 0.2518,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.2518,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "f1",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.2982,
+          "macro_score": 0.2982,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.2982,
+              "macro_score": 0.2982,
+              "subsets": [
+                {
+                  "name": "humaneval",
+                  "score": 0.2982,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "humaneval": {
+            "requested": 100,
+            "succeeded": 100,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 100,
+          "latency": {
+            "mean": 5.995684,
+            "std": 2.702023,
+            "min": 1.82411,
+            "25%": 3.912968,
+            "50%": 5.759176,
+            "75%": 7.755138,
+            "90%": 8.898681,
+            "99%": 13.595213,
+            "max": 13.851535
+          },
+          "throughput": {
+            "avg_output_tps": 19.3,
+            "avg_req_ps": 0.1668
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 187.83,
+              "std": 61.952255,
+              "min": 99.0,
+              "25%": 145.75,
+              "50%": 178.0,
+              "75%": 214.0,
+              "90%": 252.3,
+              "99%": 393.02,
+              "max": 395.0
+            },
+            "output_tokens": {
+              "mean": 115.74,
+              "std": 60.432719,
+              "min": 26.0,
+              "25%": 67.0,
+              "50%": 111.0,
+              "75%": 157.25,
+              "90%": 183.6,
+              "99%": 289.01,
+              "max": 290.0
+            },
+            "total_tokens": {
+              "mean": 303.57,
+              "std": 93.860229,
+              "min": 140.0,
+              "25%": 232.75,
+              "50%": 298.0,
+              "75%": 346.5,
+              "90%": 400.0,
+              "99%": 560.55,
+              "max": 615.0
+            },
+            "total_input_tokens": 18783,
+            "total_output_tokens": 11574,
+            "total_tokens_count": 30357
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 100,
+          "total_requests": 100
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-1100/humaneval/reviews/gemma4-26b-a4b/general_qa_humaneval.jsonl": "214e4c9e7a6a1b9975d4d6bb9f60fec974c1cb215aa1695f32e5850ef06b0ce0"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    },
+    "pokemon": {
+      "benchmark": "general_vqa",
+      "n": 300,
+      "correct": 278,
+      "task_accuracy": 0.9266666666666666,
+      "task_metric_origin": "independent_postprocessing",
+      "scores_by_source_index": {
+        "0": 0.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0,
+        "9": 0.0,
+        "10": 1.0,
+        "11": 1.0,
+        "12": 1.0,
+        "13": 1.0,
+        "14": 1.0,
+        "15": 1.0,
+        "16": 1.0,
+        "17": 1.0,
+        "18": 0.0,
+        "19": 1.0,
+        "20": 1.0,
+        "21": 1.0,
+        "22": 1.0,
+        "23": 1.0,
+        "24": 1.0,
+        "25": 1.0,
+        "26": 1.0,
+        "27": 1.0,
+        "28": 1.0,
+        "29": 1.0,
+        "30": 0.0,
+        "31": 1.0,
+        "32": 1.0,
+        "33": 1.0,
+        "34": 1.0,
+        "35": 1.0,
+        "36": 1.0,
+        "37": 1.0,
+        "38": 1.0,
+        "39": 1.0,
+        "40": 1.0,
+        "41": 1.0,
+        "42": 1.0,
+        "43": 0.0,
+        "44": 1.0,
+        "45": 1.0,
+        "46": 1.0,
+        "47": 1.0,
+        "48": 1.0,
+        "49": 1.0,
+        "50": 1.0,
+        "51": 1.0,
+        "52": 1.0,
+        "53": 1.0,
+        "54": 1.0,
+        "55": 0.0,
+        "56": 1.0,
+        "57": 1.0,
+        "58": 1.0,
+        "59": 1.0,
+        "60": 1.0,
+        "61": 0.0,
+        "62": 1.0,
+        "63": 1.0,
+        "64": 1.0,
+        "65": 1.0,
+        "66": 1.0,
+        "67": 1.0,
+        "68": 1.0,
+        "69": 1.0,
+        "70": 1.0,
+        "71": 1.0,
+        "72": 1.0,
+        "73": 1.0,
+        "74": 1.0,
+        "75": 1.0,
+        "76": 1.0,
+        "77": 1.0,
+        "78": 1.0,
+        "79": 1.0,
+        "80": 1.0,
+        "81": 1.0,
+        "82": 0.0,
+        "83": 1.0,
+        "84": 1.0,
+        "85": 1.0,
+        "86": 1.0,
+        "87": 1.0,
+        "88": 1.0,
+        "89": 1.0,
+        "90": 1.0,
+        "91": 1.0,
+        "92": 1.0,
+        "93": 1.0,
+        "94": 1.0,
+        "95": 1.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 1.0,
+        "99": 1.0,
+        "100": 1.0,
+        "101": 1.0,
+        "102": 1.0,
+        "103": 1.0,
+        "104": 1.0,
+        "105": 1.0,
+        "106": 0.0,
+        "107": 0.0,
+        "108": 1.0,
+        "109": 0.0,
+        "110": 1.0,
+        "111": 1.0,
+        "112": 1.0,
+        "113": 1.0,
+        "114": 1.0,
+        "115": 1.0,
+        "116": 1.0,
+        "117": 1.0,
+        "118": 1.0,
+        "119": 1.0,
+        "120": 1.0,
+        "121": 1.0,
+        "122": 1.0,
+        "123": 1.0,
+        "124": 1.0,
+        "125": 1.0,
+        "126": 1.0,
+        "127": 1.0,
+        "128": 1.0,
+        "129": 1.0,
+        "130": 1.0,
+        "131": 1.0,
+        "132": 1.0,
+        "133": 1.0,
+        "134": 1.0,
+        "135": 1.0,
+        "136": 1.0,
+        "137": 1.0,
+        "138": 1.0,
+        "139": 1.0,
+        "140": 1.0,
+        "141": 1.0,
+        "142": 0.0,
+        "143": 1.0,
+        "144": 1.0,
+        "145": 0.0,
+        "146": 1.0,
+        "147": 1.0,
+        "148": 0.0,
+        "149": 1.0,
+        "150": 1.0,
+        "151": 1.0,
+        "152": 1.0,
+        "153": 1.0,
+        "154": 1.0,
+        "155": 1.0,
+        "156": 1.0,
+        "157": 1.0,
+        "158": 1.0,
+        "159": 1.0,
+        "160": 1.0,
+        "161": 1.0,
+        "162": 0.0,
+        "163": 1.0,
+        "164": 1.0,
+        "165": 1.0,
+        "166": 1.0,
+        "167": 1.0,
+        "168": 1.0,
+        "169": 0.0,
+        "170": 1.0,
+        "171": 1.0,
+        "172": 1.0,
+        "173": 1.0,
+        "174": 1.0,
+        "175": 1.0,
+        "176": 1.0,
+        "177": 1.0,
+        "178": 1.0,
+        "179": 1.0,
+        "180": 0.0,
+        "181": 1.0,
+        "182": 1.0,
+        "183": 1.0,
+        "184": 1.0,
+        "185": 1.0,
+        "186": 1.0,
+        "187": 1.0,
+        "188": 1.0,
+        "189": 1.0,
+        "190": 0.0,
+        "191": 1.0,
+        "192": 1.0,
+        "193": 1.0,
+        "194": 1.0,
+        "195": 1.0,
+        "196": 1.0,
+        "197": 1.0,
+        "198": 1.0,
+        "199": 1.0,
+        "200": 1.0,
+        "201": 1.0,
+        "202": 1.0,
+        "203": 1.0,
+        "204": 1.0,
+        "205": 1.0,
+        "206": 1.0,
+        "207": 1.0,
+        "208": 1.0,
+        "209": 1.0,
+        "210": 1.0,
+        "211": 1.0,
+        "212": 1.0,
+        "213": 1.0,
+        "214": 1.0,
+        "215": 1.0,
+        "216": 1.0,
+        "217": 1.0,
+        "218": 1.0,
+        "219": 1.0,
+        "220": 1.0,
+        "221": 1.0,
+        "222": 1.0,
+        "223": 1.0,
+        "224": 1.0,
+        "225": 1.0,
+        "226": 1.0,
+        "227": 1.0,
+        "228": 1.0,
+        "229": 1.0,
+        "230": 1.0,
+        "231": 1.0,
+        "232": 1.0,
+        "233": 1.0,
+        "234": 1.0,
+        "235": 1.0,
+        "236": 1.0,
+        "237": 1.0,
+        "238": 0.0,
+        "239": 1.0,
+        "240": 1.0,
+        "241": 1.0,
+        "242": 1.0,
+        "243": 1.0,
+        "244": 1.0,
+        "245": 1.0,
+        "246": 1.0,
+        "247": 1.0,
+        "248": 1.0,
+        "249": 1.0,
+        "250": 1.0,
+        "251": 1.0,
+        "252": 1.0,
+        "253": 1.0,
+        "254": 1.0,
+        "255": 1.0,
+        "256": 1.0,
+        "257": 1.0,
+        "258": 0.0,
+        "259": 1.0,
+        "260": 1.0,
+        "261": 1.0,
+        "262": 1.0,
+        "263": 1.0,
+        "264": 1.0,
+        "265": 1.0,
+        "266": 1.0,
+        "267": 1.0,
+        "268": 1.0,
+        "269": 1.0,
+        "270": 1.0,
+        "271": 1.0,
+        "272": 1.0,
+        "273": 1.0,
+        "274": 1.0,
+        "275": 1.0,
+        "276": 1.0,
+        "277": 1.0,
+        "278": 0.0,
+        "279": 1.0,
+        "280": 1.0,
+        "281": 1.0,
+        "282": 1.0,
+        "283": 1.0,
+        "284": 0.0,
+        "285": 1.0,
+        "286": 1.0,
+        "287": 1.0,
+        "288": 1.0,
+        "289": 1.0,
+        "290": 1.0,
+        "291": 1.0,
+        "292": 1.0,
+        "293": 1.0,
+        "294": 1.0,
+        "295": 1.0,
+        "296": 1.0,
+        "297": 1.0,
+        "298": 1.0,
+        "299": 1.0
+      },
+      "native_metrics_mean": {
+        "bleu-1": 0.7501788067005456,
+        "bleu-2": 0.628832687780054,
+        "bleu-3": 0.442205374547479,
+        "bleu-4": 0.3512856323816091,
+        "Rouge-1-R": 0.2601666666666667,
+        "Rouge-1-P": 0.13381481481481478,
+        "Rouge-1-F": 0.1765335730561416,
+        "Rouge-2-R": 0.023333333333333334,
+        "Rouge-2-P": 0.011620370370370371,
+        "Rouge-2-F": 0.015512820098619333,
+        "Rouge-L-R": 0.2601666666666667,
+        "Rouge-L-P": 0.13381481481481478,
+        "Rouge-L-F": 0.1765335730561416
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.7502,
+          "macro_score": 0.7502,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.7502,
+              "macro_score": 0.7502,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.7502,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.6288,
+          "macro_score": 0.6288,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.6288,
+              "macro_score": 0.6288,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.6288,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 3
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.4422,
+          "macro_score": 0.4422,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.4422,
+              "macro_score": 0.4422,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.4422,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 4
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.3513,
+          "macro_score": 0.3513,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.3513,
+              "macro_score": 0.3513,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.3513,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.2602,
+          "macro_score": 0.2602,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.2602,
+              "macro_score": 0.2602,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.2602,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.1338,
+          "macro_score": 0.1338,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.1338,
+              "macro_score": 0.1338,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.1338,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.1765,
+          "macro_score": 0.1765,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.1765,
+              "macro_score": 0.1765,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.1765,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.0233,
+          "macro_score": 0.0233,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.0233,
+              "macro_score": 0.0233,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.0233,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.0116,
+          "macro_score": 0.0116,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.0116,
+              "macro_score": 0.0116,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.0116,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.0155,
+          "macro_score": 0.0155,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.0155,
+              "macro_score": 0.0155,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.0155,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "recall",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.2602,
+          "macro_score": 0.2602,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.2602,
+              "macro_score": 0.2602,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.2602,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "precision",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.1338,
+          "macro_score": 0.1338,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.1338,
+              "macro_score": 0.1338,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.1338,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "f1",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 300,
+          "score": 0.1765,
+          "macro_score": 0.1765,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 300,
+              "score": 0.1765,
+              "macro_score": 0.1765,
+              "subsets": [
+                {
+                  "name": "pokemon",
+                  "score": 0.1765,
+                  "num": 300,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 300,
+        "succeeded": 300,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "pokemon": {
+            "requested": 300,
+            "succeeded": 300,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 300,
+          "latency": {
+            "mean": 4.290434,
+            "std": 0.338385,
+            "min": 2.532963,
+            "25%": 4.084182,
+            "50%": 4.286834,
+            "75%": 4.545472,
+            "90%": 4.711773,
+            "99%": 4.902493,
+            "max": 4.90782
+          },
+          "throughput": {
+            "avg_output_tps": 6.32,
+            "avg_req_ps": 0.2331
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 281.126667,
+              "std": 28.618187,
+              "min": 128.0,
+              "25%": 261.0,
+              "50%": 261.0,
+              "75%": 306.0,
+              "90%": 306.0,
+              "99%": 306.0,
+              "max": 306.0
+            },
+            "output_tokens": {
+              "mean": 27.113333,
+              "std": 1.028274,
+              "min": 25.0,
+              "25%": 26.0,
+              "50%": 27.0,
+              "75%": 28.0,
+              "90%": 28.0,
+              "99%": 31.0,
+              "max": 31.0
+            },
+            "total_tokens": {
+              "mean": 308.24,
+              "std": 28.514663,
+              "min": 155.0,
+              "25%": 288.0,
+              "50%": 291.0,
+              "75%": 333.0,
+              "90%": 334.0,
+              "99%": 336.0,
+              "max": 337.0
+            },
+            "total_input_tokens": 84338,
+            "total_output_tokens": 8134,
+            "total_tokens_count": 92472
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 300,
+          "total_requests": 300
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-1100/pokemon/reviews/gemma4-26b-a4b/general_vqa_pokemon.jsonl": "dbd4a9e9fd09735364f1a912049002b4a60a711e5f3ba001afab4775c1a417e6"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    },
+    "cifar10": {
+      "benchmark": "general_vqa",
+      "n": 100,
+      "correct": 92,
+      "task_accuracy": 0.92,
+      "task_metric_origin": "independent_postprocessing",
+      "scores_by_source_index": {
+        "0": 1.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 0.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 1.0,
+        "8": 0.0,
+        "9": 1.0,
+        "10": 0.0,
+        "11": 1.0,
+        "12": 1.0,
+        "13": 1.0,
+        "14": 1.0,
+        "15": 1.0,
+        "16": 1.0,
+        "17": 1.0,
+        "18": 1.0,
+        "19": 1.0,
+        "20": 1.0,
+        "21": 1.0,
+        "22": 1.0,
+        "23": 1.0,
+        "24": 1.0,
+        "25": 1.0,
+        "26": 1.0,
+        "27": 1.0,
+        "28": 0.0,
+        "29": 1.0,
+        "30": 1.0,
+        "31": 0.0,
+        "32": 1.0,
+        "33": 1.0,
+        "34": 1.0,
+        "35": 1.0,
+        "36": 1.0,
+        "37": 1.0,
+        "38": 1.0,
+        "39": 1.0,
+        "40": 1.0,
+        "41": 1.0,
+        "42": 0.0,
+        "43": 1.0,
+        "44": 1.0,
+        "45": 1.0,
+        "46": 1.0,
+        "47": 1.0,
+        "48": 1.0,
+        "49": 1.0,
+        "50": 1.0,
+        "51": 1.0,
+        "52": 1.0,
+        "53": 0.0,
+        "54": 1.0,
+        "55": 1.0,
+        "56": 1.0,
+        "57": 1.0,
+        "58": 1.0,
+        "59": 0.0,
+        "60": 1.0,
+        "61": 1.0,
+        "62": 1.0,
+        "63": 1.0,
+        "64": 1.0,
+        "65": 1.0,
+        "66": 1.0,
+        "67": 1.0,
+        "68": 1.0,
+        "69": 1.0,
+        "70": 1.0,
+        "71": 1.0,
+        "72": 1.0,
+        "73": 1.0,
+        "74": 1.0,
+        "75": 1.0,
+        "76": 1.0,
+        "77": 1.0,
+        "78": 1.0,
+        "79": 1.0,
+        "80": 1.0,
+        "81": 1.0,
+        "82": 1.0,
+        "83": 1.0,
+        "84": 1.0,
+        "85": 1.0,
+        "86": 1.0,
+        "87": 1.0,
+        "88": 1.0,
+        "89": 1.0,
+        "90": 1.0,
+        "91": 1.0,
+        "92": 1.0,
+        "93": 1.0,
+        "94": 1.0,
+        "95": 1.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 1.0,
+        "99": 1.0
+      },
+      "native_metrics_mean": {
+        "bleu-1": 0.92,
+        "bleu-2": 2.047067949826683e-308,
+        "bleu-3": 2.047067949826683e-308,
+        "bleu-4": 2.047067949826683e-308,
+        "Rouge-1-R": 0.92,
+        "Rouge-1-P": 0.92,
+        "Rouge-1-F": 0.9199999953999998,
+        "Rouge-2-R": 0.0,
+        "Rouge-2-P": 0.0,
+        "Rouge-2-F": 0.0,
+        "Rouge-L-R": 0.92,
+        "Rouge-L-P": 0.92,
+        "Rouge-L-F": 0.9199999953999998
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.92,
+          "macro_score": 0.92,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.92,
+              "macro_score": 0.92,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.92,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 3
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 4
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.92,
+          "macro_score": 0.92,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.92,
+              "macro_score": 0.92,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.92,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.92,
+          "macro_score": 0.92,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.92,
+              "macro_score": 0.92,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.92,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.92,
+          "macro_score": 0.92,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.92,
+              "macro_score": 0.92,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.92,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "recall",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.92,
+          "macro_score": 0.92,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.92,
+              "macro_score": 0.92,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.92,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "precision",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.92,
+          "macro_score": 0.92,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.92,
+              "macro_score": 0.92,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.92,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "f1",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.92,
+          "macro_score": 0.92,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.92,
+              "macro_score": 0.92,
+              "subsets": [
+                {
+                  "name": "cifar10",
+                  "score": 0.92,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "cifar10": {
+            "requested": 100,
+            "succeeded": 100,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 100,
+          "latency": {
+            "mean": 1.091016,
+            "std": 0.016974,
+            "min": 1.063246,
+            "25%": 1.082237,
+            "50%": 1.087863,
+            "75%": 1.095359,
+            "90%": 1.106345,
+            "99%": 1.152566,
+            "max": 1.193186
+          },
+          "throughput": {
+            "avg_output_tps": 1.83,
+            "avg_req_ps": 0.9166
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 98.0,
+              "std": 0.0,
+              "min": 98.0,
+              "25%": 98.0,
+              "50%": 98.0,
+              "75%": 98.0,
+              "90%": 98.0,
+              "99%": 98.0,
+              "max": 98.0
+            },
+            "output_tokens": {
+              "mean": 2.0,
+              "std": 0.0,
+              "min": 2.0,
+              "25%": 2.0,
+              "50%": 2.0,
+              "75%": 2.0,
+              "90%": 2.0,
+              "99%": 2.0,
+              "max": 2.0
+            },
+            "total_tokens": {
+              "mean": 100.0,
+              "std": 0.0,
+              "min": 100.0,
+              "25%": 100.0,
+              "50%": 100.0,
+              "75%": 100.0,
+              "90%": 100.0,
+              "99%": 100.0,
+              "max": 100.0
+            },
+            "total_input_tokens": 9800,
+            "total_output_tokens": 200,
+            "total_tokens_count": 10000
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 100,
+          "total_requests": 100
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-1100/cifar10/reviews/gemma4-26b-a4b/general_vqa_cifar10.jsonl": "899629fddb1cf38e157732d5628093fed187591bcbc8ca7bc2e916107eeb0b5e"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    },
+    "cppe5": {
+      "benchmark": "general_vqa",
+      "n": 100,
+      "correct": 48,
+      "task_accuracy": 0.48,
+      "task_metric_origin": "independent_postprocessing",
+      "scores_by_source_index": {
+        "0": 1.0,
+        "1": 0.0,
+        "2": 1.0,
+        "3": 0.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 0.0,
+        "8": 1.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 1.0,
+        "14": 0.0,
+        "15": 1.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 1.0,
+        "21": 0.0,
+        "22": 1.0,
+        "23": 0.0,
+        "24": 1.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0,
+        "28": 0.0,
+        "29": 0.0,
+        "30": 1.0,
+        "31": 1.0,
+        "32": 1.0,
+        "33": 0.0,
+        "34": 0.0,
+        "35": 0.0,
+        "36": 1.0,
+        "37": 1.0,
+        "38": 0.0,
+        "39": 1.0,
+        "40": 0.0,
+        "41": 0.0,
+        "42": 1.0,
+        "43": 1.0,
+        "44": 1.0,
+        "45": 1.0,
+        "46": 1.0,
+        "47": 1.0,
+        "48": 0.0,
+        "49": 1.0,
+        "50": 0.0,
+        "51": 0.0,
+        "52": 1.0,
+        "53": 0.0,
+        "54": 1.0,
+        "55": 1.0,
+        "56": 1.0,
+        "57": 1.0,
+        "58": 1.0,
+        "59": 0.0,
+        "60": 0.0,
+        "61": 0.0,
+        "62": 1.0,
+        "63": 1.0,
+        "64": 0.0,
+        "65": 0.0,
+        "66": 0.0,
+        "67": 1.0,
+        "68": 0.0,
+        "69": 1.0,
+        "70": 0.0,
+        "71": 0.0,
+        "72": 0.0,
+        "73": 1.0,
+        "74": 0.0,
+        "75": 0.0,
+        "76": 0.0,
+        "77": 1.0,
+        "78": 1.0,
+        "79": 1.0,
+        "80": 0.0,
+        "81": 0.0,
+        "82": 1.0,
+        "83": 0.0,
+        "84": 1.0,
+        "85": 0.0,
+        "86": 1.0,
+        "87": 0.0,
+        "88": 0.0,
+        "89": 1.0,
+        "90": 1.0,
+        "91": 1.0,
+        "92": 0.0,
+        "93": 1.0,
+        "94": 0.0,
+        "95": 0.0,
+        "96": 0.0,
+        "97": 1.0,
+        "98": 0.0,
+        "99": 0.0
+      },
+      "native_metrics_mean": {
+        "bleu-1": 0.14998844281924983,
+        "bleu-2": 4.1737819107539e-309,
+        "bleu-3": 4.1737819107539e-309,
+        "bleu-4": 4.1737819107539e-309,
+        "Rouge-1-R": 0.0,
+        "Rouge-1-P": 0.0,
+        "Rouge-1-F": 0.0,
+        "Rouge-2-R": 0.0,
+        "Rouge-2-P": 0.0,
+        "Rouge-2-F": 0.0,
+        "Rouge-L-R": 0.0,
+        "Rouge-L-P": 0.0,
+        "Rouge-L-F": 0.0
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.15,
+          "macro_score": 0.15,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.15,
+              "macro_score": 0.15,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.15,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 3
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 4
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "recall",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "precision",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "f1",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.0,
+          "macro_score": 0.0,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.0,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "cppe5": {
+            "requested": 100,
+            "succeeded": 100,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 100,
+          "latency": {
+            "mean": 2.689531,
+            "std": 0.905644,
+            "min": 1.096796,
+            "25%": 1.819146,
+            "50%": 3.114069,
+            "75%": 3.491588,
+            "90%": 3.629401,
+            "99%": 3.880067,
+            "max": 3.887925
+          },
+          "throughput": {
+            "avg_output_tps": 2.6,
+            "avg_req_ps": 0.3718
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 234.86,
+              "std": 89.653319,
+              "min": 92.0,
+              "25%": 132.0,
+              "50%": 304.0,
+              "75%": 316.0,
+              "90%": 316.0,
+              "99%": 328.04,
+              "max": 332.0
+            },
+            "output_tokens": {
+              "mean": 6.98,
+              "std": 2.620741,
+              "min": 2.0,
+              "25%": 5.0,
+              "50%": 7.0,
+              "75%": 9.0,
+              "90%": 11.0,
+              "99%": 11.0,
+              "max": 11.0
+            },
+            "total_tokens": {
+              "mean": 241.84,
+              "std": 90.326089,
+              "min": 97.0,
+              "25%": 139.0,
+              "50%": 311.5,
+              "75%": 323.0,
+              "90%": 326.0,
+              "99%": 337.01,
+              "max": 338.0
+            },
+            "total_input_tokens": 23486,
+            "total_output_tokens": 698,
+            "total_tokens_count": 24184
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 100,
+          "total_requests": 100
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-1100/cppe5/reviews/gemma4-26b-a4b/general_vqa_cppe5.jsonl": "1de543f7dcc9cc702e27d421b64cc9e282e34ff02f2fec648585984d513e019f"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    }
+  }
+}
