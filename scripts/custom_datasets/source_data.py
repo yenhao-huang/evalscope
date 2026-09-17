@@ -1,25 +1,23 @@
-"""Freeze local model-tester datasets into EvalScope chat JSONL subsets."""
+"""Source readers and provenance helpers; no EvalScope internals are imported."""
 
-import argparse
 import base64
 import hashlib
 import io
 import json
+import re
 from pathlib import Path
 
 import pyarrow as pa
 import requests
 from PIL import Image
 
-from evalscope.benchmarks.local_model_tester.scoring import last_number
 
-TEXT_PATHS = {
-    'mmlu': 'mmlu',
-    'gsm8k': 'gsm8k-main',
-    'humaneval': 'humaneval',
-    'geo_mmlu': 'geo-mmlu-high-school',
-    'law_mmlu': 'law-mmlu-professiona',
-}
+def last_number(text: str) -> str:
+    """Extract the source answer's last numeric token."""
+    values = re.findall(r'-?\d+(?:\.\d+)?', text.replace(',', ''))
+    return values[-1] if values else ''
+
+
 SYSTEM = 'You are a precise evaluator assistant. Follow output format strictly.'
 
 
@@ -126,59 +124,3 @@ def vision_sample(task: str, row: dict, features: dict, index: int, cache: Path)
         'target': json.dumps(gold, ensure_ascii=False),
         'metadata': metadata,
     }
-
-
-def write_subset(path: Path, samples: list[dict], source: Path) -> dict:
-    """Write the exact model inputs and publish a content fingerprint."""
-    with path.open('w') as handle:
-        for sample in samples:
-            handle.write(json.dumps(sample, ensure_ascii=False, sort_keys=True) + '\n')
-    return {
-        'source': str(source),
-        'count': len(samples),
-        'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
-        'sample_ids': [sample['metadata']['source_id'] for sample in samples],
-        'image_sha256': [
-            sample['metadata']['image_sha256'] for sample in samples if 'image_sha256' in sample['metadata']
-        ],
-    }
-
-
-def main() -> None:
-    """Convert all nine local sources and save a small tracked manifest."""
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--dataset-root', type=Path, default=Path.home() / 'Desktop/datasets')
-    parser.add_argument('--exp', type=Path, default=Path('exp/2026-09-15'))
-    args = parser.parse_args()
-    output = args.exp / 'data'
-    output.mkdir(parents=True, exist_ok=True)
-    cache = output / 'images'
-    cache.mkdir(exist_ok=True)
-    manifest = {'schema_version': 1, 'scoring_version': 'v1.0', 'sampling': 'original order, no shuffle', 'subsets': {}}
-    for task, folder in {**TEXT_PATHS, 'opseval': 'opseval'}.items():
-        root = args.dataset_root / ('chinese-question-eval/converted' if task == 'opseval' else 'full-textgen-evalset')
-        source = root / folder / 'test.jsonl'
-        rows = [json.loads(line) for line in source.read_text().split('\n') if line.strip()]
-        manifest['subsets'][task] = write_subset(
-            output / f'{task}.jsonl', [text_sample(task, row, i) for i, row in enumerate(rows)], source
-        )
-        print(task, len(rows), flush=True)
-    for task, folder in [
-        ('pokemon', 'PokemonCards_train_300'),
-        ('cifar10', 'cifar10_classification'),
-        ('cppe5', 'object_detection'),
-    ]:
-        source = args.dataset_root / 'vision-dataset' / folder
-        rows, features = load_arrow(source)
-        samples = []
-        for i, row in enumerate(rows):
-            samples.append(vision_sample(task, row, features, i, cache))
-            if (i + 1) % 25 == 0:
-                print(task, i + 1, '/', len(rows), flush=True)
-        manifest['subsets'][task] = write_subset(output / f'{task}.jsonl', samples, source)
-    (args.exp / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
-    print('Saved', args.exp / 'manifest.json', flush=True)
-
-
-if __name__ == '__main__':
-    main()

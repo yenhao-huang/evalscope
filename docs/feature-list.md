@@ -1,12 +1,11 @@
 # Feature list
 
-| Feature | Status | Entry points | Notes |
-| --- | --- | --- | --- |
-| Repository governance | available | [Rules](rules/git.md), [AGENTS](../AGENTS.md) | Root .venv; experiments under exp/ |
-| Nine local benchmark migration | available | [Converter](../scripts/convert_model_tester.py) | 5 text + 3 vision + OpsEval; stable hashes |
-| Local Gemma evaluation | available | [Experiment](../exp/2026-09-15/README.md) | All 9 complete: Pokemon 300, eight other subsets 100 each; v1.1 audited results |
-| Remote endpoint and paired comparison | available | [Runner](../scripts/run_model_tester.py), [Compare](../scripts/compare_model_tester.py) | Shared frozen data and scoring |
-| DGX Spark validation | available | [Issue 2](https://github.com/yenhao-huang/evalscope/issues/2) | Completed: remote 280/300 vs local 278/300; paired interval within ±5 pp; full provenance recorded |
-| Contract CI and dependency maintenance | available | [Workflow](../.github/workflows/local-model-tester.yml), [Dependabot](../.github/dependabot.yml) | Activates after push |
-| ARCH / Docker / Linux | planned | [Issue 1](https://github.com/yenhao-huang/evalscope/issues/1) | Dataset and task specifications missing |
-| Cached review-only rescoring | available | [Runner](../scripts/run_model_tester.py) | v1.1 numeric equivalence; immutable prediction hashes; original generation performance |
+| Feature | Status | Entry points / notes |
+| --- | --- | --- |
+| Existing-interface-only policy | enforced | [AGENTS](../AGENTS.md), [rules](rules/git.md); no framework edits or new adapters for personal evaluation |
+| Nine local dataset conversions | available | [Native converters](../scripts/custom_datasets/README.md); 21,307 rows, source and output hashes |
+| Native evaluation | running | [2026-09-17 experiment](../exp/2026-09-17-native-interfaces/README.md); 1,100 local samples, separate native and task metrics |
+| DGX native comparison | running | Same frozen PokemonCards 300 inputs; result publication follows validation |
+| Historical adapter experiment | archived | [2026-09-15](../exp/2026-09-15/README.md), executable code at commit 60c1e98f |
+| Contract CI | configured | [.github/workflows/custom-datasets.yml](../.github/workflows/custom-datasets.yml) |
+| ARCH / Docker / Linux | missing inputs | Source datasets and task definitions still required |

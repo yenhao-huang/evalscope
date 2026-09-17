@@ -1,4 +1,4 @@
-"""Versioned deterministic scoring for the local model-tester migration."""
+"""Independent task metrics on saved EvalScope outputs; never registered with EvalScope."""
 
 import json
 import os

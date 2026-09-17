@@ -1,0 +1,59 @@
+{
+  "total": 21307,
+  "subsets": {
+    "mmlu": {
+      "count": 14042,
+      "source_ids_match_legacy": true,
+      "image_hashes_match_legacy": true,
+      "image_count": 0
+    },
+    "geo_mmlu": {
+      "count": 198,
+      "source_ids_match_legacy": true,
+      "image_hashes_match_legacy": true,
+      "image_count": 0
+    },
+    "law_mmlu": {
+      "count": 1534,
+      "source_ids_match_legacy": true,
+      "image_hashes_match_legacy": true,
+      "image_count": 0
+    },
+    "opseval": {
+      "count": 2250,
+      "source_ids_match_legacy": true,
+      "image_hashes_match_legacy": true,
+      "image_count": 0
+    },
+    "gsm8k": {
+      "count": 1319,
+      "source_ids_match_legacy": true,
+      "image_hashes_match_legacy": true,
+      "image_count": 0
+    },
+    "humaneval": {
+      "count": 164,
+      "source_ids_match_legacy": true,
+      "image_hashes_match_legacy": true,
+      "image_count": 0
+    },
+    "pokemon": {
+      "count": 300,
+      "source_ids_match_legacy": true,
+      "image_hashes_match_legacy": true,
+      "image_count": 300
+    },
+    "cifar10": {
+      "count": 1000,
+      "source_ids_match_legacy": true,
+      "image_hashes_match_legacy": true,
+      "image_count": 1000
+    },
+    "cppe5": {
+      "count": 500,
+      "source_ids_match_legacy": true,
+      "image_hashes_match_legacy": true,
+      "image_count": 500
+    }
+  }
+}

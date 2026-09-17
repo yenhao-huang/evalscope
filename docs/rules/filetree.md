@@ -3,8 +3,8 @@
 ## Allowed structure and directory roles
 
 Preserve upstream `.github/`, `custom_eval/`, `docs/`, `evalscope/`, `examples/`, `requirements/`, `scripts/`, `skills/`, `tests/` and root build files.
-- `evalscope/`: registered benchmark adapters and reusable framework code.
-- `scripts/`: dataset conversion and experiment orchestration.
+- `evalscope/`: upstream framework code; personal evaluations must not add adapters or modify internals.
+- `scripts/custom_datasets/`: source-to-native-format `convert_<name>.py` scripts, public-interface evaluation configuration, and clearly labeled independent report analysis.
 - `tests/`: offline fixture and integration tests.
 - `docs/rules/`: governance; `docs/feature-list.md`: feature status.
 - `exp/<exp-name>/`: every experiment, including configs, manifest, report and aggregate results. Initial run: `exp/2026-09-15/`.
