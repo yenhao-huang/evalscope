@@ -20,19 +20,6 @@ def last_number(text: str) -> str:
     return numbers[-1] if numbers else ''
 
 
-def choice_letter(text: str) -> str:
-    """Prefer explicit answer markers, standalone lines, then final letter token."""
-    for pattern, flags in [
-        (r'^(?:final\s*answer|answer)\s*[:：]?\s*([ABCD])\b', re.I | re.M),
-        (r'^\s*([ABCD])\s*$', re.I | re.M),
-        (r'(?<![A-Z])[ABCD](?![A-Z])', 0),
-    ]:
-        matches = re.findall(pattern, text.upper(), flags)
-        if matches:
-            return matches[-1].upper()
-    return ''
-
-
 def code_program(response: str, metadata: dict) -> str:
     """Build a HumanEval program from a full function or a body completion."""
     code = re.sub(r'^```[\w+-]*\n|\n```\s*$', '', response.strip()).strip()
@@ -103,8 +90,6 @@ def score_response(prediction: str, target: str, metadata: dict) -> dict[str, fl
     """Score content only; transport failures must be rejected by the evaluator."""
     task = metadata['task']
     gold = json.loads(target)
-    if task in ('mmlu', 'geo_mmlu', 'law_mmlu'):
-        return {'acc': float(choice_letter(prediction) == gold)}
     if task == 'gsm8k':
         number = last_number(prediction)
         try:
@@ -112,20 +97,6 @@ def score_response(prediction: str, target: str, metadata: dict) -> dict[str, fl
         except InvalidOperation:
             equivalent = False
         return {'acc': float(equivalent), 'legacy_numeric_string': float(bool(number) and number == gold)}
-    if task == 'opseval':
-        allowed = set('ABCDEFGHIJKLMNOPQRSTUVWXYZ'[: metadata['choice_count']])
-        text = prediction.strip().upper()
-        marked = re.findall(r'(?:答案|ANSWER|ANS)\s*[:：]?\s*([A-Z](?:\s*[,，、/& ]\s*[A-Z])*)', text)
-        candidates = marked + ([text.splitlines()[0], text] if text else [])
-        answer = next(
-            (
-                set(c for c in candidate if c in allowed)
-                for candidate in candidates
-                if any(c in allowed for c in candidate)
-            ),
-            set(),
-        )
-        return {'acc': float(answer == set(gold))}
     if task == 'pokemon':
         text = re.sub(r'^```(?:json)?\s*|\s*```$', '', prediction.strip())
         try:
