@@ -23,7 +23,7 @@ from evalscope import TaskConfig
 from evalscope.api.registry import get_benchmark as registered_benchmark
 
 
-def get_benchmark(name: str, settings: dict):
+def get_benchmark(name: str, settings: dict) -> object:
     return registered_benchmark(name, TaskConfig(model="fixture", datasets=[name], dataset_args={name: settings}))
 
 

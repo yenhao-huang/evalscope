@@ -1,0 +1,951 @@
+{
+  "identity": {
+    "api_url": "http://100.109.182.22:3335/v1",
+    "model": "/workspace/llm_model",
+    "subsets": [
+      "pokemon"
+    ],
+    "limit": 1,
+    "pokemon_limit": 1,
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 4096,
+    "manifest_sha256": "54ee922ff58f990ba643131e371b46f781b935b6899da640b072d0adb5dc4c0f",
+    "runner_sha256": "0342d87589a1f544ef143cc03e7f8945454ad5ee5960008db98e1f3d8a61b8bc",
+    "framework_tree": "4524e9920f9184297763adbaa141ca7e2b58db5b"
+  },
+  "started_at": "2026-09-17T03:59:06.528755+00:00",
+  "completed_subsets": [
+    {
+      "subset": "pokemon",
+      "benchmark": "general_vqa",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "llm_model@general_vqa",
+          "dataset_name": "general_vqa",
+          "dataset_pretty_name": "General-VQA",
+          "dataset_description": "\n## Overview\n\nGeneral-VQA is a customizable visual question answering benchmark for evaluating multimodal models.\nIt supports OpenAI-compatible message format with flexible image/video/audio input (local paths, URLs, or base64).\n\n## Task Description\n\n- **Task Type**: Visual Question Answering\n- **Input**: Images/videos/audio + questions in OpenAI chat format\n- **Output**: Free-form text answer\n- **Flexibility**: Supports custom datasets via TSV/JSONL files\n\n## Key Features\n\n- OpenAI-compatible message format\n- Supports multiple image/video/audio input methods (path, URL, base64)\n- **Media placeholders**: Use ``<image N>`` / ``<video N>`` / ``<audio N>`` in plain-text user messages with indexed media columns (``image_1``, ``video_1``, ``audio_1``, etc.) for a simpler data format\n- Flexible evaluation with BLEU and Rouge metrics\n- Custom dataset support via local file loading\n- Extensible for various VQA use cases\n\n## Evaluation Notes\n\n- Default configuration uses **0-shot** evaluation\n- Default metrics: **BLEU**, **Rouge** (Rouge-L-R as main score)\n- Evaluates on **test** split\n- See [User Guide](https://evalscope.readthedocs.io/en/latest/advanced_guides/custom_dataset/vlm.html) for dataset format\n",
+          "model_name": "llm_model",
+          "metrics": [
+            {
+              "identity": {
+                "name": "bleu",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 1
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.75,
+              "macro_score": 0.75,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.75,
+                  "macro_score": 0.75,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.75,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.bleu.ratio",
+                "metric_name": "BLEU",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "bleu",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 2
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.5789,
+              "macro_score": 0.5789,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.5789,
+                  "macro_score": 0.5789,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.5789,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.bleu.ratio",
+                "metric_name": "BLEU",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "bleu",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 3
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.3889,
+              "macro_score": 0.3889,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.3889,
+                  "macro_score": 0.3889,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.3889,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.bleu.ratio",
+                "metric_name": "BLEU",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "bleu",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 4
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.2941,
+              "macro_score": 0.2941,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.2941,
+                  "macro_score": 0.2941,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.2941,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.bleu.ratio",
+                "metric_name": "BLEU",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "rouge",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 1,
+                  "statistic": "recall"
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.2,
+              "macro_score": 0.2,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.2,
+                  "macro_score": 0.2,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.2,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.rouge.ratio",
+                "metric_name": "ROUGE",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "rouge",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 1,
+                  "statistic": "precision"
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.125,
+              "macro_score": 0.125,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.125,
+                  "macro_score": 0.125,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.125,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.rouge.ratio",
+                "metric_name": "ROUGE",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "rouge",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 1,
+                  "statistic": "f1"
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.1538,
+              "macro_score": 0.1538,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.1538,
+                  "macro_score": 0.1538,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.1538,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.rouge.ratio",
+                "metric_name": "ROUGE",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "rouge",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 2,
+                  "statistic": "recall"
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.0,
+                  "macro_score": 0.0,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.0,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.rouge.ratio",
+                "metric_name": "ROUGE",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "rouge",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 2,
+                  "statistic": "precision"
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.0,
+                  "macro_score": 0.0,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.0,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.rouge.ratio",
+                "metric_name": "ROUGE",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "rouge",
+                "aggregation": "mean",
+                "dimensions": {
+                  "ngram": 2,
+                  "statistic": "f1"
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.0,
+              "macro_score": 0.0,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.0,
+                  "macro_score": 0.0,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.0,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.rouge.ratio",
+                "metric_name": "ROUGE",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "rouge",
+                "aggregation": "mean",
+                "dimensions": {
+                  "statistic": "recall",
+                  "variant": "l"
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.2,
+              "macro_score": 0.2,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.2,
+                  "macro_score": 0.2,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.2,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.rouge.ratio",
+                "metric_name": "ROUGE",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "rouge",
+                "aggregation": "mean",
+                "dimensions": {
+                  "statistic": "precision",
+                  "variant": "l"
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.125,
+              "macro_score": 0.125,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.125,
+                  "macro_score": 0.125,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.125,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.rouge.ratio",
+                "metric_name": "ROUGE",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "rouge",
+                "aggregation": "mean",
+                "dimensions": {
+                  "statistic": "f1",
+                  "variant": "l"
+                }
+              },
+              "legacy_name": null,
+              "num": 1,
+              "score": 0.1538,
+              "macro_score": 0.1538,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 1,
+                  "score": 0.1538,
+                  "macro_score": 0.1538,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.1538,
+                      "num": 1,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.rouge.ratio",
+                "metric_name": "ROUGE",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "summary": {
+              "n_samples": 1,
+              "latency": {
+                "mean": 7.773233,
+                "std": null,
+                "min": 7.773233,
+                "25%": 7.773233,
+                "50%": 7.773233,
+                "75%": 7.773233,
+                "90%": 7.773233,
+                "99%": 7.773233,
+                "max": 7.773233
+              },
+              "throughput": {
+                "avg_output_tps": 3.34,
+                "avg_req_ps": 0.1286
+              },
+              "usage": {
+                "input_tokens": {
+                  "mean": 306.0,
+                  "std": null,
+                  "min": 306.0,
+                  "25%": 306.0,
+                  "50%": 306.0,
+                  "75%": 306.0,
+                  "90%": 306.0,
+                  "99%": 306.0,
+                  "max": 306.0
+                },
+                "output_tokens": {
+                  "mean": 26.0,
+                  "std": null,
+                  "min": 26.0,
+                  "25%": 26.0,
+                  "50%": 26.0,
+                  "75%": 26.0,
+                  "90%": 26.0,
+                  "99%": 26.0,
+                  "max": 26.0
+                },
+                "total_tokens": {
+                  "mean": 332.0,
+                  "std": null,
+                  "min": 332.0,
+                  "25%": 332.0,
+                  "50%": 332.0,
+                  "75%": 332.0,
+                  "90%": 332.0,
+                  "99%": 332.0,
+                  "max": 332.0
+                },
+                "total_input_tokens": 306,
+                "total_output_tokens": 26,
+                "total_tokens_count": 332
+              }
+            },
+            "coverage": {
+              "requests_with_metrics": 1,
+              "total_requests": 1
+            },
+            "metric_semantics": {
+              "n_samples": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Samples",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "latency": {
+                "semantic_id": "perf.latency.seconds",
+                "metric_name": "Latency",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "lower_is_better",
+                "raw_unit": "s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "s",
+                "display_precision": 3
+              },
+              "throughput.avg_output_tps": {
+                "semantic_id": "perf.throughput.tokens_per_second",
+                "metric_name": "Output Throughput",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": "tok/s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "tok/s",
+                "display_precision": 2
+              },
+              "throughput.avg_req_ps": {
+                "semantic_id": "perf.throughput.requests_per_second",
+                "metric_name": "Request Throughput",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": "req/s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "req/s",
+                "display_precision": 2
+              },
+              "usage.input_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Input Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "usage.output_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Output Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "usage.total_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Total Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              }
+            }
+          },
+          "primary_metric_identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "recall",
+              "variant": "l"
+            }
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 1,
+            "succeeded": 1,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "pokemon": {
+                "requested": 1,
+                "succeeded": 1,
+                "errored": 0
+              }
+            }
+          },
+          "num": 1
+        }
+      ]
+    }
+  ],
+  "configs": {
+    "pokemon": {
+      "model_id": "llm_model",
+      "model_args": {},
+      "model_task": "text_generation",
+      "chat_template": null,
+      "datasets": [
+        "general_vqa"
+      ],
+      "dataset_args": {
+        "general_vqa": {
+          "local_path": "/Users/yenhaohuang/Desktop/side_project/evalscope/exp/2026-09-17-native-interfaces/data/general_vqa",
+          "subset_list": [
+            "pokemon"
+          ],
+          "shuffle": false,
+          "few_shot_num": 0
+        }
+      },
+      "dataset_dir": "/Users/yenhaohuang/.cache/modelscope/hub/datasets",
+      "dataset_hub": "modelscope",
+      "repeats": 1,
+      "eval_type": "openai_api",
+      "eval_backend": "Native",
+      "eval_config": null,
+      "limit": 1,
+      "eval_batch_size": 1,
+      "use_cache": null,
+      "rerun_review": false,
+      "work_dir": "exp/2026-09-17-native-interfaces/runs/remote-native-smoke/pokemon",
+      "no_timestamp": true,
+      "enable_progress_tracker": false,
+      "ignore_errors": false,
+      "debug": false,
+      "seed": 42,
+      "api_url": "http://100.109.182.22:3335/v1",
+      "api_key": "FROM_ENV_OR_EMPTY",
+      "timeout": null,
+      "stream": null,
+      "judge": {
+        "strategy": "auto",
+        "models": [],
+        "contract": {
+          "system_prompt": null,
+          "prompt_template": null,
+          "score_mapping": null,
+          "score_type": "pattern"
+        },
+        "repeats": 1,
+        "position_swap": "auto",
+        "aggregation": "mean",
+        "min_valid_judges": 1
+      },
+      "analysis_report": false,
+      "collect_perf": true,
+      "use_sandbox": false,
+      "sandbox_type": "docker",
+      "sandbox_manager_config": {},
+      "evalscope_version": "0.0.0_dev",
+      "model": "/workspace/llm_model",
+      "generation_config": {
+        "timeout": 600.0,
+        "batch_size": 1,
+        "max_tokens": 4096,
+        "temperature": 0.0,
+        "seed": 42,
+        "extra_body": {
+          "chat_template_kwargs": {
+            "enable_thinking": false
+          }
+        }
+      },
+      "sandbox": {
+        "enabled": false,
+        "engine": "docker",
+        "default_config": {},
+        "manager_config": {},
+        "pool_size": null
+      },
+      "agent_config": null
+    }
+  },
+  "status": "completed",
+  "model_info": {
+    "object": "list",
+    "data": [
+      {
+        "id": "/workspace/llm_model",
+        "object": "model",
+        "created": 1789617546,
+        "owned_by": "vllm",
+        "root": "/workspace/llm_model",
+        "parent": null,
+        "max_model_len": 8196,
+        "permission": [
+          {
+            "id": "modelperm-974af034c62ed85f",
+            "object": "model_permission",
+            "created": 1789617546,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "updated_at": "2026-09-17T03:59:15.502300+00:00",
+  "current_subset": "pokemon"
+}

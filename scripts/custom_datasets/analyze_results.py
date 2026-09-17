@@ -88,6 +88,7 @@ def analyze(exp: Path, run_name: str) -> dict:
         expected = min(entry['count'], run['identity']['pokemon_limit' if task == 'pokemon' else 'limit'])
         review_paths = sorted((exp / 'runs' / run_name / task / 'reviews').rglob('*.jsonl'))
         scores = {}
+        native_values = {}
         for review_path in review_paths:
             for review in records(review_path):
                 index = review['index']
@@ -100,6 +101,8 @@ def analyze(exp: Path, run_name: str) -> dict:
                 score = review['sample_score']['score']
                 if score['status'] != 'success' or score.get('metadata', {}).get('metric_errors'):
                     raise ValueError('Native scoring error')
+                for metric, native_value in score['value'].items():
+                    native_values.setdefault(metric, []).append(float(native_value))
                 if entry['benchmark'] == 'general_mcq':
                     value = score['value']['accuracy']
                 else:
@@ -121,6 +124,7 @@ def analyze(exp: Path, run_name: str) -> dict:
             if entry['benchmark'] == 'general_mcq'
             else 'independent_postprocessing',
             'scores_by_source_index': {str(k): scores[k] for k in sorted(scores)},
+            'native_metrics_mean': {key: sum(values) / len(values) for key, values in native_values.items()},
             'native_report_metrics': report.get('metrics'),
             'execution_summary': report['execution_summary'],
             'perf_metrics': report.get('perf_metrics'),
