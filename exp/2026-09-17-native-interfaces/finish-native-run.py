@@ -118,6 +118,11 @@ def main() -> None:
     ]
     local_lines = lines[: lines.index('## PokemonCards 本機／DGX')]
     local_lines += ['', '## 範圍與指標', '', *lines[lines.index('## 指標與範圍') + 2 : lines.index('## 證據與重現')]]
+    local_lines = [
+        line.replace('- 兩端所有樣本來源索引', '- 本機所有樣本來源索引')
+        for line in local_lines
+        if not line.startswith('- 本機 llama.cpp GGUF Q4、遠端')
+    ]
     (EXP / 'local-results.md').write_text('\n'.join(local_lines).rstrip() + '\n')
     (EXP / 'results.md').write_text('\n'.join(lines))
     print('Completed report:', EXP / 'results.md', flush=True)

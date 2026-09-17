@@ -5,7 +5,7 @@
 本輪依使用者要求移除自訂 `local_model_tester` adapter。EvalScope 的 `evalscope/` 目錄與上游基準 `09b1be41` 相同；僅使用既有 `TaskConfig`、`run_task` 與 general_mcq／general_qa／general_vqa 介面。
 
 - 原始九個資料集全部轉換：21,307 筆；來源與輸出 SHA-256 見 [manifest](manifest.json)。
-- 正式本機重評：PokemonCards 300 張，其餘八项原始順序前 100 題，共 1,100 筆。不是其餘八項全量測試。
+- 正式本機重評：PokemonCards 300 張，其餘八項原始順序前 100 題，共 1,100 筆。不是其餘八項全量測試。
 - 正式 DGX 重評：同一批 PokemonCards 300 張、同一份圖片與提示詞。
 - 全新推論與 run name，不使用 2026-09-15 的回答快取。
 - 四個選擇題來源使用原生提示詞／答案抽取；原生 MCQ accuracy 與舊 adapter 的成績不可直接混用。
@@ -30,7 +30,7 @@
 
 ## 驗證
 
-原生資料載入、來源順序、選項／目標、圖片 bytes、不覆寫凍結資料、公開介面依賴與独立指標／隔離執行皆有離線測試。正式執行前，本機九項各一筆與遠端 Pokemon 一筆通過推論及完整稽核。
+原生資料載入、來源順序、選項／目標、圖片 bytes、不覆寫凍結資料、公開介面依賴與獨立指標／隔離執行皆有離線測試。正式執行前，本機九項各一筆與遠端 Pokemon 一筆通過推論及完整稽核。
 
 第一輪 smoke 發現原生 BLEU 缺少 `punkt_tab`，失敗記錄 `native-smoke.json` 保留；在根 `.venv/nltk_data` 補齊後另用 `native-smoke-validated` 完整重跑成功，不將錯誤分數算成成功。
 
