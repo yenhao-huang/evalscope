@@ -1,0 +1,335 @@
+{
+  "n": 300,
+  "local_accuracy": 0.9266666666666666,
+  "remote_accuracy": 0.9333333333333333,
+  "remote_minus_local": 0.006666666666666667,
+  "paired_bootstrap_95_interval": [
+    0.0,
+    0.016666666666666666
+  ],
+  "bootstrap_seed": 42,
+  "bootstrap_resamples": 10000,
+  "correctness_agreement": 0.9933333333333333,
+  "local_only_correct": 0,
+  "remote_only_correct": 2,
+  "tolerance": 0.05,
+  "within_tolerance": true,
+  "interpretation": "Paired bootstrap describes this sample set, not universal model equivalence.",
+  "subset": "pokemon",
+  "local_run": "local-native-1100",
+  "remote_run": "remote-native-pokemon-300",
+  "metric_origin": "independent_postprocessing",
+  "local_perf_metrics": {
+    "summary": {
+      "n_samples": 300,
+      "latency": {
+        "mean": 4.290434,
+        "std": 0.338385,
+        "min": 2.532963,
+        "25%": 4.084182,
+        "50%": 4.286834,
+        "75%": 4.545472,
+        "90%": 4.711773,
+        "99%": 4.902493,
+        "max": 4.90782
+      },
+      "throughput": {
+        "avg_output_tps": 6.32,
+        "avg_req_ps": 0.2331
+      },
+      "usage": {
+        "input_tokens": {
+          "mean": 281.126667,
+          "std": 28.618187,
+          "min": 128.0,
+          "25%": 261.0,
+          "50%": 261.0,
+          "75%": 306.0,
+          "90%": 306.0,
+          "99%": 306.0,
+          "max": 306.0
+        },
+        "output_tokens": {
+          "mean": 27.113333,
+          "std": 1.028274,
+          "min": 25.0,
+          "25%": 26.0,
+          "50%": 27.0,
+          "75%": 28.0,
+          "90%": 28.0,
+          "99%": 31.0,
+          "max": 31.0
+        },
+        "total_tokens": {
+          "mean": 308.24,
+          "std": 28.514663,
+          "min": 155.0,
+          "25%": 288.0,
+          "50%": 291.0,
+          "75%": 333.0,
+          "90%": 334.0,
+          "99%": 336.0,
+          "max": 337.0
+        },
+        "total_input_tokens": 84338,
+        "total_output_tokens": 8134,
+        "total_tokens_count": 92472
+      }
+    },
+    "coverage": {
+      "requests_with_metrics": 300,
+      "total_requests": 300
+    },
+    "metric_semantics": {
+      "n_samples": {
+        "semantic_id": "diagnostic.count.items",
+        "metric_name": "Samples",
+        "display_name": null,
+        "kind": "diagnostic",
+        "direction": "none",
+        "raw_unit": null,
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": null,
+        "display_precision": 0
+      },
+      "latency": {
+        "semantic_id": "perf.latency.seconds",
+        "metric_name": "Latency",
+        "display_name": null,
+        "kind": "quality",
+        "direction": "lower_is_better",
+        "raw_unit": "s",
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": "s",
+        "display_precision": 3
+      },
+      "throughput.avg_output_tps": {
+        "semantic_id": "perf.throughput.tokens_per_second",
+        "metric_name": "Output Throughput",
+        "display_name": null,
+        "kind": "quality",
+        "direction": "higher_is_better",
+        "raw_unit": "tok/s",
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": "tok/s",
+        "display_precision": 2
+      },
+      "throughput.avg_req_ps": {
+        "semantic_id": "perf.throughput.requests_per_second",
+        "metric_name": "Request Throughput",
+        "display_name": null,
+        "kind": "quality",
+        "direction": "higher_is_better",
+        "raw_unit": "req/s",
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": "req/s",
+        "display_precision": 2
+      },
+      "usage.input_tokens": {
+        "semantic_id": "diagnostic.count.items",
+        "metric_name": "Input Tokens",
+        "display_name": null,
+        "kind": "diagnostic",
+        "direction": "none",
+        "raw_unit": null,
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": null,
+        "display_precision": 0
+      },
+      "usage.output_tokens": {
+        "semantic_id": "diagnostic.count.items",
+        "metric_name": "Output Tokens",
+        "display_name": null,
+        "kind": "diagnostic",
+        "direction": "none",
+        "raw_unit": null,
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": null,
+        "display_precision": 0
+      },
+      "usage.total_tokens": {
+        "semantic_id": "diagnostic.count.items",
+        "metric_name": "Total Tokens",
+        "display_name": null,
+        "kind": "diagnostic",
+        "direction": "none",
+        "raw_unit": null,
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": null,
+        "display_precision": 0
+      }
+    }
+  },
+  "remote_perf_metrics": {
+    "summary": {
+      "n_samples": 300,
+      "latency": {
+        "mean": 2.676679,
+        "std": 1.787955,
+        "min": 1.551136,
+        "25%": 1.953128,
+        "50%": 2.300747,
+        "75%": 2.791986,
+        "90%": 3.42146,
+        "99%": 13.859667,
+        "max": 16.348535
+      },
+      "throughput": {
+        "avg_output_tps": 10.14,
+        "avg_req_ps": 0.3736
+      },
+      "usage": {
+        "input_tokens": {
+          "mean": 306.0,
+          "std": 0.0,
+          "min": 306.0,
+          "25%": 306.0,
+          "50%": 306.0,
+          "75%": 306.0,
+          "90%": 306.0,
+          "99%": 306.0,
+          "max": 306.0
+        },
+        "output_tokens": {
+          "mean": 27.14,
+          "std": 1.075914,
+          "min": 25.0,
+          "25%": 26.0,
+          "50%": 27.0,
+          "75%": 28.0,
+          "90%": 28.0,
+          "99%": 31.0,
+          "max": 31.0
+        },
+        "total_tokens": {
+          "mean": 333.14,
+          "std": 1.075914,
+          "min": 331.0,
+          "25%": 332.0,
+          "50%": 333.0,
+          "75%": 334.0,
+          "90%": 334.0,
+          "99%": 337.0,
+          "max": 337.0
+        },
+        "total_input_tokens": 91800,
+        "total_output_tokens": 8142,
+        "total_tokens_count": 99942
+      }
+    },
+    "coverage": {
+      "requests_with_metrics": 300,
+      "total_requests": 300
+    },
+    "metric_semantics": {
+      "n_samples": {
+        "semantic_id": "diagnostic.count.items",
+        "metric_name": "Samples",
+        "display_name": null,
+        "kind": "diagnostic",
+        "direction": "none",
+        "raw_unit": null,
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": null,
+        "display_precision": 0
+      },
+      "latency": {
+        "semantic_id": "perf.latency.seconds",
+        "metric_name": "Latency",
+        "display_name": null,
+        "kind": "quality",
+        "direction": "lower_is_better",
+        "raw_unit": "s",
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": "s",
+        "display_precision": 3
+      },
+      "throughput.avg_output_tps": {
+        "semantic_id": "perf.throughput.tokens_per_second",
+        "metric_name": "Output Throughput",
+        "display_name": null,
+        "kind": "quality",
+        "direction": "higher_is_better",
+        "raw_unit": "tok/s",
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": "tok/s",
+        "display_precision": 2
+      },
+      "throughput.avg_req_ps": {
+        "semantic_id": "perf.throughput.requests_per_second",
+        "metric_name": "Request Throughput",
+        "display_name": null,
+        "kind": "quality",
+        "direction": "higher_is_better",
+        "raw_unit": "req/s",
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": "req/s",
+        "display_precision": 2
+      },
+      "usage.input_tokens": {
+        "semantic_id": "diagnostic.count.items",
+        "metric_name": "Input Tokens",
+        "display_name": null,
+        "kind": "diagnostic",
+        "direction": "none",
+        "raw_unit": null,
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": null,
+        "display_precision": 0
+      },
+      "usage.output_tokens": {
+        "semantic_id": "diagnostic.count.items",
+        "metric_name": "Output Tokens",
+        "display_name": null,
+        "kind": "diagnostic",
+        "direction": "none",
+        "raw_unit": null,
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": null,
+        "display_precision": 0
+      },
+      "usage.total_tokens": {
+        "semantic_id": "diagnostic.count.items",
+        "metric_name": "Total Tokens",
+        "display_name": null,
+        "kind": "diagnostic",
+        "direction": "none",
+        "raw_unit": null,
+        "value_range": null,
+        "display_kind": "number",
+        "display_multiplier": null,
+        "display_unit": null,
+        "display_precision": 0
+      }
+    }
+  },
+  "manifest_sha256": "54ee922ff58f990ba643131e371b46f781b935b6899da640b072d0adb5dc4c0f",
+  "comparison_sha256": "7061468f8861cfad278a71f06708e5d2090d233560b77f2e9298509830cd7fcb",
+  "deployment_caveat": "Local llama.cpp GGUF Q4 and remote vLLM FP8 differ; not a hardware-only comparison."
+}

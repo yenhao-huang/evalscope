@@ -1,0 +1,929 @@
+{
+  "run_name": "local-native-cppe-100",
+  "run_sha256": "27c2e94d5476dec516a5092f9926b5fbe6834ec5e4ca86a15318970174ec1f82",
+  "status": "audited",
+  "task_metric_version": "v1.1",
+  "task_metric_sha256": "552181bf68c49cdad1716349f86ddf292d0634c4694b1a7111521f90ed266361",
+  "analyzer_sha256": "a5d97cccdeb58a98a54a07660fc5c3a40af240441f89822950df22384fdc9ef9",
+  "note": "MCQ accuracy is native. Other task accuracies are independent post-processing, not EvalScope metrics.",
+  "subsets": {
+    "cppe5": {
+      "benchmark": "general_vqa",
+      "n": 100,
+      "correct": 48,
+      "task_accuracy": 0.48,
+      "task_metric_origin": "independent_postprocessing",
+      "scores_by_source_index": {
+        "0": 1.0,
+        "1": 0.0,
+        "2": 1.0,
+        "3": 0.0,
+        "4": 1.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 0.0,
+        "8": 1.0,
+        "9": 1.0,
+        "10": 1.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 1.0,
+        "14": 0.0,
+        "15": 1.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 1.0,
+        "21": 0.0,
+        "22": 1.0,
+        "23": 0.0,
+        "24": 1.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0,
+        "28": 0.0,
+        "29": 0.0,
+        "30": 1.0,
+        "31": 1.0,
+        "32": 1.0,
+        "33": 0.0,
+        "34": 0.0,
+        "35": 0.0,
+        "36": 1.0,
+        "37": 1.0,
+        "38": 0.0,
+        "39": 1.0,
+        "40": 0.0,
+        "41": 0.0,
+        "42": 1.0,
+        "43": 1.0,
+        "44": 1.0,
+        "45": 1.0,
+        "46": 1.0,
+        "47": 1.0,
+        "48": 0.0,
+        "49": 1.0,
+        "50": 0.0,
+        "51": 0.0,
+        "52": 1.0,
+        "53": 0.0,
+        "54": 1.0,
+        "55": 1.0,
+        "56": 1.0,
+        "57": 1.0,
+        "58": 1.0,
+        "59": 0.0,
+        "60": 0.0,
+        "61": 0.0,
+        "62": 1.0,
+        "63": 1.0,
+        "64": 0.0,
+        "65": 0.0,
+        "66": 0.0,
+        "67": 1.0,
+        "68": 0.0,
+        "69": 1.0,
+        "70": 0.0,
+        "71": 0.0,
+        "72": 0.0,
+        "73": 1.0,
+        "74": 0.0,
+        "75": 0.0,
+        "76": 0.0,
+        "77": 1.0,
+        "78": 1.0,
+        "79": 1.0,
+        "80": 0.0,
+        "81": 0.0,
+        "82": 1.0,
+        "83": 0.0,
+        "84": 1.0,
+        "85": 0.0,
+        "86": 1.0,
+        "87": 0.0,
+        "88": 0.0,
+        "89": 1.0,
+        "90": 1.0,
+        "91": 1.0,
+        "92": 0.0,
+        "93": 1.0,
+        "94": 0.0,
+        "95": 0.0,
+        "96": 0.0,
+        "97": 1.0,
+        "98": 0.0,
+        "99": 0.0
+      },
+      "native_metrics_mean": {
+        "bleu-1": 0.784828545812918,
+        "bleu-2": 0.6184485918119517,
+        "bleu-3": 0.4792388067858246,
+        "bleu-4": 0.3261804043733858,
+        "Rouge-1-R": 0.7893333333333336,
+        "Rouge-1-P": 0.8291666666666667,
+        "Rouge-1-F": 0.7932142810242189,
+        "Rouge-2-R": 0.46666666666666673,
+        "Rouge-2-P": 0.48,
+        "Rouge-2-F": 0.46599999696805566,
+        "Rouge-L-R": 0.7893333333333336,
+        "Rouge-L-P": 0.8291666666666667,
+        "Rouge-L-F": 0.7932142810242189
+      },
+      "native_report_metrics": [
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.7848,
+          "macro_score": 0.7848,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.7848,
+              "macro_score": 0.7848,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.7848,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.6184,
+          "macro_score": 0.6184,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.6184,
+              "macro_score": 0.6184,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.6184,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 3
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.4792,
+          "macro_score": 0.4792,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.4792,
+              "macro_score": 0.4792,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.4792,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "bleu",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 4
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.3262,
+          "macro_score": 0.3262,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.3262,
+              "macro_score": 0.3262,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.3262,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.bleu.ratio",
+            "metric_name": "BLEU",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.7893,
+          "macro_score": 0.7893,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.7893,
+              "macro_score": 0.7893,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.7893,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.8292,
+          "macro_score": 0.8292,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.8292,
+              "macro_score": 0.8292,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.8292,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 1,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.7932,
+          "macro_score": 0.7932,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.7932,
+              "macro_score": 0.7932,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.7932,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "recall"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.4667,
+          "macro_score": 0.4667,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.4667,
+              "macro_score": 0.4667,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.4667,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "precision"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.48,
+          "macro_score": 0.48,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.48,
+              "macro_score": 0.48,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.48,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "ngram": 2,
+              "statistic": "f1"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.466,
+          "macro_score": 0.466,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.466,
+              "macro_score": 0.466,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.466,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "recall",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.7893,
+          "macro_score": 0.7893,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.7893,
+              "macro_score": 0.7893,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.7893,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "precision",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.8292,
+          "macro_score": 0.8292,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.8292,
+              "macro_score": 0.8292,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.8292,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        },
+        {
+          "identity": {
+            "name": "rouge",
+            "aggregation": "mean",
+            "dimensions": {
+              "statistic": "f1",
+              "variant": "l"
+            }
+          },
+          "legacy_name": null,
+          "num": 100,
+          "score": 0.7932,
+          "macro_score": 0.7932,
+          "categories": [
+            {
+              "name": [
+                "default"
+              ],
+              "num": 100,
+              "score": 0.7932,
+              "macro_score": 0.7932,
+              "subsets": [
+                {
+                  "name": "cppe5",
+                  "score": 0.7932,
+                  "num": 100,
+                  "is_aggregate": false
+                }
+              ]
+            }
+          ],
+          "semantics": {
+            "semantic_id": "quality.rouge.ratio",
+            "metric_name": "ROUGE",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": null,
+            "value_range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "display_kind": "percent",
+            "display_multiplier": 100.0,
+            "display_unit": "%",
+            "display_precision": 1
+          }
+        }
+      ],
+      "execution_summary": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "cppe5": {
+            "requested": 100,
+            "succeeded": 100,
+            "errored": 0
+          }
+        }
+      },
+      "perf_metrics": {
+        "summary": {
+          "n_samples": 100,
+          "latency": {
+            "mean": 2.764332,
+            "std": 0.919078,
+            "min": 1.144015,
+            "25%": 1.849924,
+            "50%": 3.217121,
+            "75%": 3.564396,
+            "90%": 3.732421,
+            "99%": 4.002628,
+            "max": 4.018464
+          },
+          "throughput": {
+            "avg_output_tps": 2.53,
+            "avg_req_ps": 0.3618
+          },
+          "usage": {
+            "input_tokens": {
+              "mean": 234.86,
+              "std": 89.653319,
+              "min": 92.0,
+              "25%": 132.0,
+              "50%": 304.0,
+              "75%": 316.0,
+              "90%": 316.0,
+              "99%": 328.04,
+              "max": 332.0
+            },
+            "output_tokens": {
+              "mean": 6.98,
+              "std": 2.620741,
+              "min": 2.0,
+              "25%": 5.0,
+              "50%": 7.0,
+              "75%": 9.0,
+              "90%": 11.0,
+              "99%": 11.0,
+              "max": 11.0
+            },
+            "total_tokens": {
+              "mean": 241.84,
+              "std": 90.326089,
+              "min": 97.0,
+              "25%": 139.0,
+              "50%": 311.5,
+              "75%": 323.0,
+              "90%": 326.0,
+              "99%": 337.01,
+              "max": 338.0
+            },
+            "total_input_tokens": 23486,
+            "total_output_tokens": 698,
+            "total_tokens_count": 24184
+          }
+        },
+        "coverage": {
+          "requests_with_metrics": 100,
+          "total_requests": 100
+        },
+        "metric_semantics": {
+          "n_samples": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Samples",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "latency": {
+            "semantic_id": "perf.latency.seconds",
+            "metric_name": "Latency",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "lower_is_better",
+            "raw_unit": "s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "s",
+            "display_precision": 3
+          },
+          "throughput.avg_output_tps": {
+            "semantic_id": "perf.throughput.tokens_per_second",
+            "metric_name": "Output Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "tok/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "tok/s",
+            "display_precision": 2
+          },
+          "throughput.avg_req_ps": {
+            "semantic_id": "perf.throughput.requests_per_second",
+            "metric_name": "Request Throughput",
+            "display_name": null,
+            "kind": "quality",
+            "direction": "higher_is_better",
+            "raw_unit": "req/s",
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": "req/s",
+            "display_precision": 2
+          },
+          "usage.input_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Input Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.output_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Output Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          },
+          "usage.total_tokens": {
+            "semantic_id": "diagnostic.count.items",
+            "metric_name": "Total Tokens",
+            "display_name": null,
+            "kind": "diagnostic",
+            "direction": "none",
+            "raw_unit": null,
+            "value_range": null,
+            "display_kind": "number",
+            "display_multiplier": null,
+            "display_unit": null,
+            "display_precision": 0
+          }
+        }
+      },
+      "review_sha256": {
+        "runs/local-native-cppe-100/cppe5/reviews/gemma4-26b-a4b/general_vqa_cppe5.jsonl": "5f977f85b980df5e3186664128d561d445c6bcac41829700109326f3822a2732"
+      },
+      "audit": "all source indices, native targets, prompts/options and image hashes verified"
+    }
+  }
+}

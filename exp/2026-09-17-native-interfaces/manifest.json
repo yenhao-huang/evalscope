@@ -1,0 +1,166 @@
+{
+  "schema_version": 2,
+  "interface": "built-in general_mcq/general_qa/general_vqa",
+  "sampling": "original source order; all source rows converted",
+  "subsets": {
+    "mmlu": {
+      "benchmark": "general_mcq",
+      "count": 14042,
+      "file": "general_mcq/mmlu_val.jsonl",
+      "sha256": "f071165cd4ad31ad71d673d2e2ba3d7626cbd3eb6b7255f38eeecea5babee3c2",
+      "sidecar": "mmlu.sidecar.jsonl",
+      "sidecar_sha256": "36e71afe1b5d2e5452408655f791357f59e13126d0b8be760ab13b679cd61e5e",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/full-textgen-evalset/mmlu/test.jsonl",
+          "sha256": "903179ca496c3a80683685a3e4bcec761d2826df64682892cde15def955f6e7d"
+        }
+      ],
+      "multiple_correct": false
+    },
+    "geo_mmlu": {
+      "benchmark": "general_mcq",
+      "count": 198,
+      "file": "general_mcq/geo_mmlu_val.jsonl",
+      "sha256": "da579288fe56926a03a126cd0cee4cdcc650f11106fc2f694dca8183c7214a8c",
+      "sidecar": "geo_mmlu.sidecar.jsonl",
+      "sidecar_sha256": "6ae410c3e2e497e17f5bb549428231abf647835e02d83f21e84cd6949411c6e5",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/full-textgen-evalset/geo-mmlu-high-school/test.jsonl",
+          "sha256": "bb2242442b216d9c39f8d06471353cee4d488d7415d2623a52b80b1fe5604972"
+        }
+      ],
+      "multiple_correct": false
+    },
+    "law_mmlu": {
+      "benchmark": "general_mcq",
+      "count": 1534,
+      "file": "general_mcq/law_mmlu_val.jsonl",
+      "sha256": "f1b9ecd90d1c5e69411db7c9c0ba7ac2db7fed6cb326259655cd4d061f049588",
+      "sidecar": "law_mmlu.sidecar.jsonl",
+      "sidecar_sha256": "0e1cb419d55a967ca22e65074f6219da3d10b3913f0b90bda2c2102c138bc764",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/full-textgen-evalset/law-mmlu-professiona/test.jsonl",
+          "sha256": "5da556d65ae7cd4572f8b6d0a2b1773f03c6c82972fd74b349032f8418f458e1"
+        }
+      ],
+      "multiple_correct": false
+    },
+    "opseval": {
+      "benchmark": "general_mcq",
+      "count": 2250,
+      "file": "general_mcq/opseval_val.jsonl",
+      "sha256": "9cc96da10f3fb9adfd414246f81a256188b5324dac67d55392415df352a509ab",
+      "sidecar": "opseval.sidecar.jsonl",
+      "sidecar_sha256": "a03f8a66d483df23cfc62d17aebce2ac2ef52c10a5dcd7a4e97895ced02560d0",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/chinese-question-eval/converted/opseval/test.jsonl",
+          "sha256": "88266d4551a47c09a5ef5af7f23ca99582f0ce966a8c9dfa93b9b88293429a9e"
+        }
+      ],
+      "multiple_correct": true
+    },
+    "gsm8k": {
+      "benchmark": "general_qa",
+      "count": 1319,
+      "file": "general_qa/gsm8k.jsonl",
+      "sha256": "ecb60397fb74cfed0d35e79c6b390dfc6660426f42e7f777f9d71221f949b5ee",
+      "sidecar": "gsm8k.sidecar.jsonl",
+      "sidecar_sha256": "f693c15ca3112f819a6b2ccbb69b563a775429e982a0169c32b845fd0defc03d",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/full-textgen-evalset/gsm8k-main/test.jsonl",
+          "sha256": "752adc99f23132275139f1f7be57126b08735a55daf0c56859ee6df70abafbac"
+        }
+      ],
+      "multiple_correct": false
+    },
+    "humaneval": {
+      "benchmark": "general_qa",
+      "count": 164,
+      "file": "general_qa/humaneval.jsonl",
+      "sha256": "9a983e014c16df918fe3950c2076db7a30c43cbd6bd2e8023bf6cffa9722905f",
+      "sidecar": "humaneval.sidecar.jsonl",
+      "sidecar_sha256": "67da71aacb8a7b74ac422fb512dbe5860f0e79e3b5c1391ef291c99da64d684f",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/full-textgen-evalset/humaneval/test.jsonl",
+          "sha256": "b2adeeae8b383b6f0c615746a397f25c8abe44da4afb29cd10e6c4bbf0463fd3"
+        }
+      ],
+      "multiple_correct": false
+    },
+    "pokemon": {
+      "benchmark": "general_vqa",
+      "count": 300,
+      "file": "general_vqa/pokemon.jsonl",
+      "sha256": "6981cabbf9546a1385c2f10020854864ed7c2d383559af5738765ace48366a23",
+      "sidecar": "pokemon.sidecar.jsonl",
+      "sidecar_sha256": "9f1e98c3677005121b9db71d24c2a03ecac38c5274173eddec8657d95e2f2410",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/PokemonCards_train_300/state.json",
+          "sha256": "9771211147c393f88a4d215b82fa93e1cc3c0cab65a944d7597a58895613d56c"
+        },
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/PokemonCards_train_300/dataset_info.json",
+          "sha256": "56a59d7f8311dfbbe5e9a625dd9786de0914cda2ee3bdb099f74606aa17ede72"
+        },
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/PokemonCards_train_300/data-00000-of-00001.arrow",
+          "sha256": "92433147bf443150f34524cb85d0e9598d9c9debd92a4ee7673245b73b6498ce"
+        }
+      ],
+      "multiple_correct": false
+    },
+    "cifar10": {
+      "benchmark": "general_vqa",
+      "count": 1000,
+      "file": "general_vqa/cifar10.jsonl",
+      "sha256": "23e627a1ea22ac0e57a1007c56eb52686571274c42661a973e43138c76b5112b",
+      "sidecar": "cifar10.sidecar.jsonl",
+      "sidecar_sha256": "a65ac4e983bc8ac3ed86ccc908c2e9bc51202d7daaa339abdf8fa72154e92d5f",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/cifar10_classification/state.json",
+          "sha256": "0e0541f540457be6e540c2703cd4b401a1cac2a0de3bca9f9c4974595f4c46bd"
+        },
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/cifar10_classification/dataset_info.json",
+          "sha256": "e38b39fa8e421c8789bc7501066524ed5dcf719b8aa469afe4b1dc593e5f088f"
+        },
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/cifar10_classification/data-00000-of-00001.arrow",
+          "sha256": "959ee9d8a9a24b19ea5f292246cce1a322cff8eaaa76d9dc82f3e24010c169ea"
+        }
+      ],
+      "multiple_correct": false
+    },
+    "cppe5": {
+      "benchmark": "general_vqa",
+      "count": 500,
+      "file": "general_vqa/cppe5.jsonl",
+      "sha256": "2d9e0ddea898b81dc68bdb3b03af3ddea871bbeb0ce8f2707df2bc0491625851",
+      "sidecar": "cppe5.sidecar.jsonl",
+      "sidecar_sha256": "8db700425a48f588ddf8bb73a92417843bd41727925431f77bfeba621607ae80",
+      "source_files": [
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/object_detection/state.json",
+          "sha256": "df3954852f68705d1477f5d3c9fda0266453c0875313aa3d9383ac44509de7f4"
+        },
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/object_detection/dataset_info.json",
+          "sha256": "4d6c01101adc4b487130e0ab5e0a3be8ed2baace3cb50233740437e1bccca6a3"
+        },
+        {
+          "path": "/Users/yenhaohuang/Desktop/datasets/vision-dataset/object_detection/data-00000-of-00001.arrow",
+          "sha256": "047b4fa4347aec326bf6318be7078a3a4666bac913413f69874c312e7313b81d"
+        }
+      ],
+      "multiple_correct": false
+    }
+  }
+}
