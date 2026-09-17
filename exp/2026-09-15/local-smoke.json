@@ -1,0 +1,1371 @@
+{
+  "identity": {
+    "model": "gemma4-26b-a4b",
+    "api_url": "http://127.0.0.1:8092/v1",
+    "subsets": [
+      "mmlu",
+      "gsm8k",
+      "humaneval",
+      "geo_mmlu",
+      "law_mmlu",
+      "opseval",
+      "pokemon",
+      "cifar10",
+      "cppe5"
+    ],
+    "limit": 3,
+    "manifest_sha256": "1b11880a063458db726df3c33db2e9794213efa0d869edc66e404228f81f6f3a",
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 4096,
+    "reasoning": "off",
+    "scoring_version": "v1.0"
+  },
+  "status": "completed",
+  "started_at": "2026-09-15T08:04:04.067188+00:00",
+  "git_commit": "09b1be41d05f5996ad58296fb6c59aff28ee3ee9",
+  "model_info": {
+    "models": [
+      {
+        "name": "gemma4-26b-a4b",
+        "model": "gemma4-26b-a4b",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion",
+          "multimodal"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "gemma4-26b-a4b",
+        "aliases": [
+          "gemma4-26b-a4b"
+        ],
+        "tags": [],
+        "object": "model",
+        "created": 1789459444,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 262144,
+          "n_ctx": 8192,
+          "n_ctx_train": 262144,
+          "n_embd": 2816,
+          "n_params": 25233142046,
+          "size": 17129196664,
+          "ftype": "Q4_K - Medium"
+        }
+      }
+    ]
+  },
+  "source_sha256": {
+    "/Users/yenhaohuang/Desktop/side_project/evalscope/scripts/run_model_tester.py": "f5e8e193c116bed879c0d15c05dc2fcb58b91a280c0d92a9484426fdd3da7ec7",
+    "evalscope/benchmarks/local_model_tester/scoring.py": "932de2d8dda50058b134b92ea3ed0c68247c65cb3a13e27798583db2a7895838",
+    "evalscope/benchmarks/local_model_tester/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evalscope/benchmarks/local_model_tester/local_model_tester_adapter.py": "18396e1d57c3315cf4af7ab35519bc23c63b2d9846d734200cc2283d7a1ef063"
+  },
+  "completed_subsets": [
+    {
+      "subset": "mmlu",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "gemma4-26b-a4b@local_model_tester",
+          "dataset_name": "local_model_tester",
+          "dataset_pretty_name": "Local Model Tester",
+          "dataset_description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.0. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+          "model_name": "gemma4-26b-a4b",
+          "metrics": [
+            {
+              "identity": {
+                "name": "accuracy",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 1.0,
+              "macro_score": 1.0,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 1.0,
+                  "macro_score": 1.0,
+                  "subsets": [
+                    {
+                      "name": "mmlu",
+                      "score": 1.0,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.accuracy.ratio",
+                "metric_name": "Accuracy",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "coverage": {
+              "requests_with_metrics": 0,
+              "total_requests": 0
+            }
+          },
+          "primary_metric_identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 3,
+            "succeeded": 3,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "mmlu": {
+                "requested": 3,
+                "succeeded": 3,
+                "errored": 0
+              }
+            }
+          },
+          "num": 3
+        }
+      ]
+    },
+    {
+      "subset": "gsm8k",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "gemma4-26b-a4b@local_model_tester",
+          "dataset_name": "local_model_tester",
+          "dataset_pretty_name": "Local Model Tester",
+          "dataset_description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.0. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+          "model_name": "gemma4-26b-a4b",
+          "metrics": [
+            {
+              "identity": {
+                "name": "accuracy",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 1.0,
+              "macro_score": 1.0,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 1.0,
+                  "macro_score": 1.0,
+                  "subsets": [
+                    {
+                      "name": "gsm8k",
+                      "score": 1.0,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.accuracy.ratio",
+                "metric_name": "Accuracy",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "coverage": {
+              "requests_with_metrics": 0,
+              "total_requests": 0
+            }
+          },
+          "primary_metric_identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 3,
+            "succeeded": 3,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "gsm8k": {
+                "requested": 3,
+                "succeeded": 3,
+                "errored": 0
+              }
+            }
+          },
+          "num": 3
+        }
+      ]
+    },
+    {
+      "subset": "humaneval",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "gemma4-26b-a4b@local_model_tester",
+          "dataset_name": "local_model_tester",
+          "dataset_pretty_name": "Local Model Tester",
+          "dataset_description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.0. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+          "model_name": "gemma4-26b-a4b",
+          "metrics": [
+            {
+              "identity": {
+                "name": "accuracy",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 0.6667,
+              "macro_score": 0.6667,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 0.6667,
+                  "macro_score": 0.6667,
+                  "subsets": [
+                    {
+                      "name": "humaneval",
+                      "score": 0.6667,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.accuracy.ratio",
+                "metric_name": "Accuracy",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "coverage": {
+              "requests_with_metrics": 0,
+              "total_requests": 0
+            }
+          },
+          "primary_metric_identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 3,
+            "succeeded": 3,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "humaneval": {
+                "requested": 3,
+                "succeeded": 3,
+                "errored": 0
+              }
+            }
+          },
+          "num": 3
+        }
+      ]
+    },
+    {
+      "subset": "geo_mmlu",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "gemma4-26b-a4b@local_model_tester",
+          "dataset_name": "local_model_tester",
+          "dataset_pretty_name": "Local Model Tester",
+          "dataset_description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.0. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+          "model_name": "gemma4-26b-a4b",
+          "metrics": [
+            {
+              "identity": {
+                "name": "accuracy",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 1.0,
+              "macro_score": 1.0,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 1.0,
+                  "macro_score": 1.0,
+                  "subsets": [
+                    {
+                      "name": "geo_mmlu",
+                      "score": 1.0,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.accuracy.ratio",
+                "metric_name": "Accuracy",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "coverage": {
+              "requests_with_metrics": 0,
+              "total_requests": 0
+            }
+          },
+          "primary_metric_identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 3,
+            "succeeded": 3,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "geo_mmlu": {
+                "requested": 3,
+                "succeeded": 3,
+                "errored": 0
+              }
+            }
+          },
+          "num": 3
+        }
+      ]
+    },
+    {
+      "subset": "law_mmlu",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "gemma4-26b-a4b@local_model_tester",
+          "dataset_name": "local_model_tester",
+          "dataset_pretty_name": "Local Model Tester",
+          "dataset_description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.0. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+          "model_name": "gemma4-26b-a4b",
+          "metrics": [
+            {
+              "identity": {
+                "name": "accuracy",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 0.3333,
+              "macro_score": 0.3333,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 0.3333,
+                  "macro_score": 0.3333,
+                  "subsets": [
+                    {
+                      "name": "law_mmlu",
+                      "score": 0.3333,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.accuracy.ratio",
+                "metric_name": "Accuracy",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "coverage": {
+              "requests_with_metrics": 0,
+              "total_requests": 0
+            }
+          },
+          "primary_metric_identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 3,
+            "succeeded": 3,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "law_mmlu": {
+                "requested": 3,
+                "succeeded": 3,
+                "errored": 0
+              }
+            }
+          },
+          "num": 3
+        }
+      ]
+    },
+    {
+      "subset": "opseval",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "gemma4-26b-a4b@local_model_tester",
+          "dataset_name": "local_model_tester",
+          "dataset_pretty_name": "Local Model Tester",
+          "dataset_description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.0. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+          "model_name": "gemma4-26b-a4b",
+          "metrics": [
+            {
+              "identity": {
+                "name": "accuracy",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 0.3333,
+              "macro_score": 0.3333,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 0.3333,
+                  "macro_score": 0.3333,
+                  "subsets": [
+                    {
+                      "name": "opseval",
+                      "score": 0.3333,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.accuracy.ratio",
+                "metric_name": "Accuracy",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "coverage": {
+              "requests_with_metrics": 0,
+              "total_requests": 0
+            }
+          },
+          "primary_metric_identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 3,
+            "succeeded": 3,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "opseval": {
+                "requested": 3,
+                "succeeded": 3,
+                "errored": 0
+              }
+            }
+          },
+          "num": 3
+        }
+      ]
+    },
+    {
+      "subset": "pokemon",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "gemma4-26b-a4b@local_model_tester",
+          "dataset_name": "local_model_tester",
+          "dataset_pretty_name": "Local Model Tester",
+          "dataset_description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.0. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+          "model_name": "gemma4-26b-a4b",
+          "metrics": [
+            {
+              "identity": {
+                "name": "accuracy",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 0.6667,
+              "macro_score": 0.6667,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 0.6667,
+                  "macro_score": 0.6667,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.6667,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.accuracy.ratio",
+                "metric_name": "Accuracy",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            },
+            {
+              "identity": {
+                "name": "legacy_substring",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 0.6667,
+              "macro_score": 0.6667,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 0.6667,
+                  "macro_score": 0.6667,
+                  "subsets": [
+                    {
+                      "name": "pokemon",
+                      "score": 0.6667,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "diagnostic.unspecified",
+                "metric_name": "legacy_substring",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 4
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "summary": {
+              "n_samples": 3,
+              "latency": {
+                "mean": 3.867963,
+                "std": 0.233669,
+                "min": 3.694338,
+                "25%": 3.735125,
+                "50%": 3.775912,
+                "75%": 3.954775,
+                "90%": 4.062093,
+                "99%": 4.126484,
+                "max": 4.133639
+              },
+              "throughput": {
+                "avg_output_tps": 6.89,
+                "avg_req_ps": 0.2585
+              },
+              "usage": {
+                "input_tokens": {
+                  "mean": 276.0,
+                  "std": 25.980762,
+                  "min": 261.0,
+                  "25%": 261.0,
+                  "50%": 261.0,
+                  "75%": 283.5,
+                  "90%": 297.0,
+                  "99%": 305.1,
+                  "max": 306.0
+                },
+                "output_tokens": {
+                  "mean": 26.666667,
+                  "std": 0.57735,
+                  "min": 26.0,
+                  "25%": 26.5,
+                  "50%": 27.0,
+                  "75%": 27.0,
+                  "90%": 27.0,
+                  "99%": 27.0,
+                  "max": 27.0
+                },
+                "total_tokens": {
+                  "mean": 302.666667,
+                  "std": 26.274195,
+                  "min": 287.0,
+                  "25%": 287.5,
+                  "50%": 288.0,
+                  "75%": 310.5,
+                  "90%": 324.0,
+                  "99%": 332.1,
+                  "max": 333.0
+                },
+                "total_input_tokens": 828,
+                "total_output_tokens": 80,
+                "total_tokens_count": 908
+              }
+            },
+            "coverage": {
+              "requests_with_metrics": 3,
+              "total_requests": 3
+            },
+            "metric_semantics": {
+              "n_samples": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Samples",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "latency": {
+                "semantic_id": "perf.latency.seconds",
+                "metric_name": "Latency",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "lower_is_better",
+                "raw_unit": "s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "s",
+                "display_precision": 3
+              },
+              "throughput.avg_output_tps": {
+                "semantic_id": "perf.throughput.tokens_per_second",
+                "metric_name": "Output Throughput",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": "tok/s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "tok/s",
+                "display_precision": 2
+              },
+              "throughput.avg_req_ps": {
+                "semantic_id": "perf.throughput.requests_per_second",
+                "metric_name": "Request Throughput",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": "req/s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "req/s",
+                "display_precision": 2
+              },
+              "usage.input_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Input Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "usage.output_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Output Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "usage.total_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Total Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              }
+            }
+          },
+          "primary_metric_identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 3,
+            "succeeded": 3,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "pokemon": {
+                "requested": 3,
+                "succeeded": 3,
+                "errored": 0
+              }
+            }
+          },
+          "num": 3
+        }
+      ]
+    },
+    {
+      "subset": "cifar10",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "gemma4-26b-a4b@local_model_tester",
+          "dataset_name": "local_model_tester",
+          "dataset_pretty_name": "Local Model Tester",
+          "dataset_description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.0. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+          "model_name": "gemma4-26b-a4b",
+          "metrics": [
+            {
+              "identity": {
+                "name": "accuracy",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 1.0,
+              "macro_score": 1.0,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 1.0,
+                  "macro_score": 1.0,
+                  "subsets": [
+                    {
+                      "name": "cifar10",
+                      "score": 1.0,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.accuracy.ratio",
+                "metric_name": "Accuracy",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "summary": {
+              "n_samples": 3,
+              "latency": {
+                "mean": 1.064747,
+                "std": 0.009348,
+                "min": 1.054076,
+                "25%": 1.061377,
+                "50%": 1.068677,
+                "75%": 1.070083,
+                "90%": 1.070926,
+                "99%": 1.071432,
+                "max": 1.071488
+              },
+              "throughput": {
+                "avg_output_tps": 1.88,
+                "avg_req_ps": 0.9392
+              },
+              "usage": {
+                "input_tokens": {
+                  "mean": 98.0,
+                  "std": 0.0,
+                  "min": 98.0,
+                  "25%": 98.0,
+                  "50%": 98.0,
+                  "75%": 98.0,
+                  "90%": 98.0,
+                  "99%": 98.0,
+                  "max": 98.0
+                },
+                "output_tokens": {
+                  "mean": 2.0,
+                  "std": 0.0,
+                  "min": 2.0,
+                  "25%": 2.0,
+                  "50%": 2.0,
+                  "75%": 2.0,
+                  "90%": 2.0,
+                  "99%": 2.0,
+                  "max": 2.0
+                },
+                "total_tokens": {
+                  "mean": 100.0,
+                  "std": 0.0,
+                  "min": 100.0,
+                  "25%": 100.0,
+                  "50%": 100.0,
+                  "75%": 100.0,
+                  "90%": 100.0,
+                  "99%": 100.0,
+                  "max": 100.0
+                },
+                "total_input_tokens": 294,
+                "total_output_tokens": 6,
+                "total_tokens_count": 300
+              }
+            },
+            "coverage": {
+              "requests_with_metrics": 3,
+              "total_requests": 3
+            },
+            "metric_semantics": {
+              "n_samples": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Samples",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "latency": {
+                "semantic_id": "perf.latency.seconds",
+                "metric_name": "Latency",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "lower_is_better",
+                "raw_unit": "s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "s",
+                "display_precision": 3
+              },
+              "throughput.avg_output_tps": {
+                "semantic_id": "perf.throughput.tokens_per_second",
+                "metric_name": "Output Throughput",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": "tok/s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "tok/s",
+                "display_precision": 2
+              },
+              "throughput.avg_req_ps": {
+                "semantic_id": "perf.throughput.requests_per_second",
+                "metric_name": "Request Throughput",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": "req/s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "req/s",
+                "display_precision": 2
+              },
+              "usage.input_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Input Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "usage.output_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Output Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "usage.total_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Total Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              }
+            }
+          },
+          "primary_metric_identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 3,
+            "succeeded": 3,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "cifar10": {
+                "requested": 3,
+                "succeeded": 3,
+                "errored": 0
+              }
+            }
+          },
+          "num": 3
+        }
+      ]
+    },
+    {
+      "subset": "cppe5",
+      "reports": [
+        {
+          "schema_version": 2,
+          "name": "gemma4-26b-a4b@local_model_tester",
+          "dataset_name": "local_model_tester",
+          "dataset_pretty_name": "Local Model Tester",
+          "dataset_description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.0. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+          "model_name": "gemma4-26b-a4b",
+          "metrics": [
+            {
+              "identity": {
+                "name": "accuracy",
+                "aggregation": "mean",
+                "dimensions": {}
+              },
+              "legacy_name": null,
+              "num": 3,
+              "score": 0.6667,
+              "macro_score": 0.6667,
+              "categories": [
+                {
+                  "name": [
+                    "default"
+                  ],
+                  "num": 3,
+                  "score": 0.6667,
+                  "macro_score": 0.6667,
+                  "subsets": [
+                    {
+                      "name": "cppe5",
+                      "score": 0.6667,
+                      "num": 3,
+                      "is_aggregate": false
+                    }
+                  ]
+                }
+              ],
+              "semantics": {
+                "semantic_id": "quality.accuracy.ratio",
+                "metric_name": "Accuracy",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": null,
+                "value_range": {
+                  "min": 0.0,
+                  "max": 1.0
+                },
+                "display_kind": "percent",
+                "display_multiplier": 100.0,
+                "display_unit": "%",
+                "display_precision": 1
+              }
+            }
+          ],
+          "analysis": "N/A",
+          "perf_metrics": {
+            "summary": {
+              "n_samples": 3,
+              "latency": {
+                "mean": 3.294004,
+                "std": 0.137371,
+                "min": 3.136768,
+                "25%": 3.245634,
+                "50%": 3.354501,
+                "75%": 3.372623,
+                "90%": 3.383496,
+                "99%": 3.39002,
+                "max": 3.390745
+              },
+              "throughput": {
+                "avg_output_tps": 1.62,
+                "avg_req_ps": 0.3036
+              },
+              "usage": {
+                "input_tokens": {
+                  "mean": 320.0,
+                  "std": 10.583005,
+                  "min": 312.0,
+                  "25%": 314.0,
+                  "50%": 316.0,
+                  "75%": 324.0,
+                  "90%": 328.8,
+                  "99%": 331.68,
+                  "max": 332.0
+                },
+                "output_tokens": {
+                  "mean": 5.333333,
+                  "std": 2.516611,
+                  "min": 3.0,
+                  "25%": 4.0,
+                  "50%": 5.0,
+                  "75%": 6.5,
+                  "90%": 7.4,
+                  "99%": 7.94,
+                  "max": 8.0
+                },
+                "total_tokens": {
+                  "mean": 325.333333,
+                  "std": 10.115994,
+                  "min": 319.0,
+                  "25%": 319.5,
+                  "50%": 320.0,
+                  "75%": 328.5,
+                  "90%": 333.6,
+                  "99%": 336.66,
+                  "max": 337.0
+                },
+                "total_input_tokens": 960,
+                "total_output_tokens": 16,
+                "total_tokens_count": 976
+              }
+            },
+            "coverage": {
+              "requests_with_metrics": 3,
+              "total_requests": 3
+            },
+            "metric_semantics": {
+              "n_samples": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Samples",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "latency": {
+                "semantic_id": "perf.latency.seconds",
+                "metric_name": "Latency",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "lower_is_better",
+                "raw_unit": "s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "s",
+                "display_precision": 3
+              },
+              "throughput.avg_output_tps": {
+                "semantic_id": "perf.throughput.tokens_per_second",
+                "metric_name": "Output Throughput",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": "tok/s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "tok/s",
+                "display_precision": 2
+              },
+              "throughput.avg_req_ps": {
+                "semantic_id": "perf.throughput.requests_per_second",
+                "metric_name": "Request Throughput",
+                "display_name": null,
+                "kind": "quality",
+                "direction": "higher_is_better",
+                "raw_unit": "req/s",
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": "req/s",
+                "display_precision": 2
+              },
+              "usage.input_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Input Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "usage.output_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Output Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              },
+              "usage.total_tokens": {
+                "semantic_id": "diagnostic.count.items",
+                "metric_name": "Total Tokens",
+                "display_name": null,
+                "kind": "diagnostic",
+                "direction": "none",
+                "raw_unit": null,
+                "value_range": null,
+                "display_kind": "number",
+                "display_multiplier": null,
+                "display_unit": null,
+                "display_precision": 0
+              }
+            }
+          },
+          "primary_metric_identity": {
+            "name": "accuracy",
+            "aggregation": "mean",
+            "dimensions": {}
+          },
+          "primary_metric_unavailable_reason": null,
+          "judge_summary": null,
+          "execution_summary": {
+            "requested": 3,
+            "succeeded": 3,
+            "errored": 0,
+            "incomplete": false,
+            "subsets": {
+              "cppe5": {
+                "requested": 3,
+                "succeeded": 3,
+                "errored": 0
+              }
+            }
+          },
+          "num": 3
+        }
+      ]
+    }
+  ],
+  "updated_at": "2026-09-15T08:04:31.754705+00:00"
+}

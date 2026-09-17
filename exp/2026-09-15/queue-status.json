@@ -1,0 +1,44 @@
+{
+  "status": "completed",
+  "started_at": "2026-09-15T08:09:16.253707+00:00",
+  "jobs": [
+    {
+      "name": "local-pokemon-300",
+      "status": "completed",
+      "command": [
+        "/Users/yenhaohuang/Desktop/side_project/evalscope/.venv/bin/python",
+        "/Users/yenhaohuang/Desktop/side_project/evalscope/scripts/run_model_tester.py",
+        "--run-name",
+        "local-pokemon-300",
+        "--subsets",
+        "pokemon",
+        "--limit",
+        "300"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "local-suite-100",
+      "status": "completed",
+      "command": [
+        "/Users/yenhaohuang/Desktop/side_project/evalscope/.venv/bin/python",
+        "/Users/yenhaohuang/Desktop/side_project/evalscope/scripts/run_model_tester.py",
+        "--run-name",
+        "local-suite-100",
+        "--subsets",
+        "mmlu",
+        "gsm8k",
+        "humaneval",
+        "geo_mmlu",
+        "law_mmlu",
+        "opseval",
+        "cifar10",
+        "cppe5",
+        "--limit",
+        "100"
+      ],
+      "returncode": 0
+    }
+  ],
+  "updated_at": "2026-09-15T09:39:05.036796+00:00"
+}

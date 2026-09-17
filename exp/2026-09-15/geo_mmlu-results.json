@@ -1,0 +1,33 @@
+{
+  "run": "local-suite-100",
+  "subset": "geo_mmlu",
+  "scoring_version": "v1.0",
+  "count": 100,
+  "correct": 91.0,
+  "incorrect_source_indices": [
+    3,
+    4,
+    6,
+    27,
+    31,
+    38,
+    41,
+    55,
+    60
+  ],
+  "targets_metadata_verified": true,
+  "review_sha256": "810808d8a0a80a7b975695ca0869adbce40f2482865832b953394b8e30ea430d",
+  "execution_summary": {
+    "requested": 100,
+    "succeeded": 100,
+    "errored": 0,
+    "incomplete": false,
+    "subsets": {
+      "geo_mmlu": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0
+      }
+    }
+  }
+}

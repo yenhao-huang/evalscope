@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/opt/homebrew/bin/llama-server",
+    "-m",
+    "/Users/yenhaohuang/Desktop/models/gemma-4-26B-A4B-it-GGUF/gemma-4-26B-A4B-it-UD-Q4_K_XL.gguf",
+    "--mmproj",
+    "/Users/yenhaohuang/Desktop/models/gemma-4-26B-A4B-it-GGUF/mmproj-BF16.gguf",
+    "--port",
+    "8092",
+    "--host",
+    "127.0.0.1",
+    "--ctx-size",
+    "8192",
+    "--parallel",
+    "1",
+    "--temp",
+    "0",
+    "--top-p",
+    "0.95",
+    "--reasoning",
+    "off",
+    "--alias",
+    "gemma4-26b-a4b"
+  ],
+  "started_at": "2026-09-15T15:49:49.101949+08:00",
+  "reasoning": "off"
+}

@@ -1,0 +1,51 @@
+{
+  "run": "local-gsm8k-100-v1_1-verified",
+  "scoring_version": "v1.1",
+  "count": 100,
+  "correct": 97.0,
+  "legacy_correct": 92.0,
+  "changed_samples": [
+    {
+      "source_index": 24,
+      "target": "26",
+      "extracted_final_number": "26.00"
+    },
+    {
+      "source_index": 27,
+      "target": "16",
+      "extracted_final_number": "16.00"
+    },
+    {
+      "source_index": 36,
+      "target": "75",
+      "extracted_final_number": "75.00"
+    },
+    {
+      "source_index": 44,
+      "target": "20",
+      "extracted_final_number": "20.00"
+    },
+    {
+      "source_index": 58,
+      "target": "57",
+      "extracted_final_number": "57.00"
+    }
+  ],
+  "review_sha256": "0c28de0ce8c7e5c88f79fb076d7abeff67648dd196ecff2063e0d5c59729fd74",
+  "unchanged_prediction_cache_sha256": {
+    "predictions/gemma4-26b-a4b/local_model_tester_gsm8k.jsonl": "578767067f2d3f4ba1d303fbf664071d7250ff85192bcd880d514335a582a3d2"
+  },
+  "generation_execution_summary": {
+    "requested": 100,
+    "succeeded": 100,
+    "errored": 0,
+    "incomplete": false,
+    "subsets": {
+      "gsm8k": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0
+      }
+    }
+  }
+}

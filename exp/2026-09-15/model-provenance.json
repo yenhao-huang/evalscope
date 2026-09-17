@@ -1,0 +1,15 @@
+{
+  "files": [
+    {
+      "file": "/Users/yenhaohuang/Desktop/models/gemma-4-26B-A4B-it-GGUF/gemma-4-26B-A4B-it-UD-Q4_K_XL.gguf",
+      "bytes": 17145015040,
+      "sha256": "952a89557def565321036d99d4471de409e7f684436cfce0df7be4fb684ee8d1"
+    },
+    {
+      "file": "/Users/yenhaohuang/Desktop/models/gemma-4-26B-A4B-it-GGUF/mmproj-BF16.gguf",
+      "bytes": 1194828096,
+      "sha256": "8196e6dda1446b547d69cf30c0bf7a12a69eaf399513ab41ff065796aa975a61"
+    }
+  ],
+  "llama_server_version": "version: 10330 (687e77892)\nbuilt with AppleClang 21.0.0.21000101 for Darwin arm64"
+}

@@ -1,0 +1,15 @@
+{
+  "run": "local-pokemon-300",
+  "verified_at": "2026-09-15T08:31:11.805925+00:00",
+  "review_sha256": "63aacf35fe5f77bcf61bfeb038727c8516306b39a44094e4efbe220a9f18dcf5",
+  "manifest_sha256": "1b11880a063458db726df3c33db2e9794213efa0d869edc66e404228f81f6f3a",
+  "expected_samples": 300,
+  "actual_samples": 300,
+  "unique_original_indices": 300,
+  "all_image_hashes_match_manifest": true,
+  "correct": 278,
+  "accuracy": 0.9266666666666666,
+  "api_errors": 0,
+  "incomplete": false,
+  "mean_request_latency_seconds": 4.070869
+}

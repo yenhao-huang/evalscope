@@ -1,0 +1,29 @@
+name: Local benchmark contract
+on:
+  push:
+    paths:
+      - 'evalscope/benchmarks/local_model_tester/**'
+      - 'scripts/*model_tester*.py'
+      - 'tests/benchmarks/local_model_tester/**'
+      - '.github/workflows/local-model-tester.yml'
+  pull_request:
+    paths:
+      - 'evalscope/benchmarks/local_model_tester/**'
+      - 'scripts/*model_tester*.py'
+      - 'tests/benchmarks/local_model_tester/**'
+      - '.github/workflows/local-model-tester.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m venv .venv
+      - run: .venv/bin/pip install -e . pytest ruff
+      - run: .venv/bin/ruff check evalscope/benchmarks/local_model_tester scripts/convert_model_tester.py scripts/run_model_tester.py scripts/compare_model_tester.py scripts/model_tester_queue.py tests/benchmarks/local_model_tester
+      - run: .venv/bin/pytest tests/benchmarks/local_model_tester -q

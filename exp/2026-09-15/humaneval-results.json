@@ -1,0 +1,30 @@
+{
+  "run": "local-suite-100",
+  "subset": "humaneval",
+  "scoring_version": "v1.0",
+  "count": 100,
+  "correct": 94.0,
+  "incorrect_source_indices": [
+    1,
+    3,
+    6,
+    32,
+    38,
+    84
+  ],
+  "targets_metadata_verified": true,
+  "review_sha256": "8e5050f18e0ae606a16abe8c5723e0799ac6e59d8368ccc518e5231842ea3a23",
+  "execution_summary": {
+    "requested": 100,
+    "succeeded": 100,
+    "errored": 0,
+    "incomplete": false,
+    "subsets": {
+      "humaneval": {
+        "requested": 100,
+        "succeeded": 100,
+        "errored": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "pretty_name": "Local Model Tester",
+    "dataset_id": "local_model_tester",
+    "paper_url": null,
+    "tags": [
+      "Custom"
+    ],
+    "metrics": [
+      "accuracy"
+    ],
+    "few_shot_num": 0,
+    "eval_split": "test",
+    "train_split": "",
+    "subset_list": [
+      "mmlu",
+      "gsm8k",
+      "humaneval",
+      "geo_mmlu",
+      "law_mmlu",
+      "opseval",
+      "pokemon",
+      "cifar10",
+      "cppe5"
+    ],
+    "description": "\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.1. GSM8K compares numerical values (26.00 equals 26) and retains legacy string accuracy separately. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n",
+    "prompt_template": "{question}",
+    "system_prompt": "",
+    "few_shot_prompt_template": "",
+    "aggregation": "mean",
+    "extra_params": {
+      "review_only": false
+    },
+    "sandbox_config": {},
+    "category": "llm"
+  },
+  "statistics": {
+    "total_samples": 0,
+    "subset_stats": [],
+    "prompt_length": {
+      "mean": 0,
+      "min": 0,
+      "max": 0,
+      "std": null
+    },
+    "target_length_mean": null,
+    "computed_at": "2026-09-15T17:21:37.012908"
+  },
+  "sample_example": {},
+  "readme": {
+    "en": "# Local Model Tester\n\n\n## Overview\nA reproducible migration of nine local model-tester benchmarks into EvalScope.\n\n## Task Description\n- **Task Type**: Multiple choice, mathematics, code generation, OCR and visual classification.\n- **Input**: Versioned local JSONL chat samples with frozen image content.\n- **Output**: Choice letters, numeric answers, Python code, JSON fields or class labels.\n- **Domain**: Knowledge, operations, mathematics, code and vision.\n\n## Key Features\n- Nine subsets: MMLU, GSM8K, HumanEval, Geo-MMLU, Law-MMLU, OpsEval, PokemonCards, CIFAR-10 and CPPE-5.\n- Stable sample IDs, original ordering and source-content hashes from the conversion manifest.\n- No remote dataset fallback; converted local data is required.\n\n## Evaluation Notes\n- Zero-shot deterministic accuracy, version v1.1. GSM8K compares numerical values (26.00 equals 26) and retains legacy string accuracy separately. Pokemon primary accuracy requires name/hp field equality.\n- Historical Pokemon substring accuracy is reported separately; CPPE-5 measures class sets, not boxes.\n- HumanEval uses macOS sandbox-exec with denied network/file writes and resource/time limits.\n- Samples and image bytes are local generated artifacts and are not committed.\n\n\n## Properties\n\n| Property | Value |\n|----------|-------|\n| **Benchmark Name** | `local_model_tester` |\n| **Dataset ID** | `local_model_tester` |\n| **Paper** | N/A |\n| **Tags** | `Custom` |\n| **Metrics** | `accuracy` |\n| **Default Shots** | 0-shot |\n| **Evaluation Split** | `test` |\n\n\n## Data Statistics\n\n*Statistics not available.*\n\n## Sample Example\n\n*Sample example not available.*\n\n## Prompt Template\n\n**Prompt Template:**\n```text\n{question}\n```\n\n## Extra Parameters\n\n| Parameter | Type | Default | Description |\n|-----------|------|---------|-------------|\n| `review_only` | - | `False` | - |\n\n## Usage\n\n### Using CLI\n\n```bash\nevalscope eval \\\n    --model YOUR_MODEL \\\n    --api-url OPENAI_API_COMPAT_URL \\\n    --api-key EMPTY_TOKEN \\\n    --datasets local_model_tester \\\n    --limit 10  # Remove this line for formal evaluation\n```\n\n### Using Python\n\n```python\nfrom evalscope import run_task\nfrom evalscope.config import TaskConfig\n\ntask_cfg = TaskConfig(\n    model='YOUR_MODEL',\n    api_url='OPENAI_API_COMPAT_URL',\n    api_key='EMPTY_TOKEN',\n    datasets=['local_model_tester'],\n    dataset_args={\n        'local_model_tester': {\n            # extra_params: {}  # uses default extra parameters\n        }\n    },\n    limit=10,  # Remove this line for formal evaluation\n)\n\nrun_task(task_cfg=task_cfg)\n```\n\n\n",
+    "zh": "",
+    "content_hash": "37d729db0b8511db41191811fde88a0c",
+    "needs_translation": true
+  },
+  "updated_at": "2026-09-15T17:21:37.013036"
+}
