@@ -1,0 +1,27 @@
+{
+  "run": "remote-pokemon-300",
+  "n": 300,
+  "correct": 280,
+  "legacy_correct": 280,
+  "execution_summary": {
+    "requested": 300,
+    "succeeded": 300,
+    "errored": 0,
+    "incomplete": false,
+    "subsets": {
+      "pokemon": {
+        "requested": 300,
+        "succeeded": 300,
+        "errored": 0
+      }
+    }
+  },
+  "review_sha256": "7197d2548c7b5ec3decbd28e9029ce97763907dbe4c75364383b791fb61e036d",
+  "run_sha256": "6994d0f35289ea64f57fc0c71f4fa81d2c6cc62e3527a15831a5118daabbc72b",
+  "comparison_sha256": "a9742286edd7efd9b3f34cb6531812cd341c008f3882fa55459d22b95ab73646",
+  "manifest_sha256": "1b11880a063458db726df3c33db2e9794213efa0d869edc66e404228f81f6f3a",
+  "unique_source_indices_verified": true,
+  "targets_metadata_verified": true,
+  "all_300_uploaded_image_hashes_verified": true,
+  "all_input_roles_and_text_verified": true
+}

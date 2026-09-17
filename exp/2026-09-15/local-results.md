@@ -27,3 +27,5 @@
 MMLU 的前 100 題全部是 abstract_algebra，不能當作完整 57 科 MMLU 分數。本輪前 100 題也不是 model-tester 舊版 seed 42 隨機抽樣 100 題，不能直接與歷史百分比比較。
 
 CPPE-5 評估 PPE 類別集合完全一致，並非 bounding-box mAP。HumanEval 以隔離程式測試判分，未做舊 runner 的第二次縮排修復。
+
+ARCH、Docker、Linux 尚缺本地資料與評分定義，未納入九項。DGX Spark 遠端已完成 280/300（93.33%），與本機 278/300 相近，見 [Phase 2 完整比較](phase2-results.md)。

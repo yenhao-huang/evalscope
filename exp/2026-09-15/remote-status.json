@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-09-15T11:47:02.840751+00:00",
+  "target": "100.109.182.22",
+  "ssh_user": "wingene",
+  "status": "online",
+  "ssh": "authenticated successfully",
+  "hostname": "7febb5b7c919",
+  "gpu": "NVIDIA GB10",
+  "requested_model_config": "/workspace/deprecated/gemma-4-26B-A4B-it.yaml",
+  "config_sha256": "aad145c30d12d8d7513bab9af2556d3bffe2bda9e1f7698afbef0f81d052954c",
+  "evaluation": "300/300 completed and independently verified",
+  "blockers": [],
+  "available_gguf": {
+    "path": "/workspace/models/unsloth-gemma-4-26B-A4B-it-GGUF/",
+    "model_sha256": "87121467dee16160e5678be823187079784ccda8f20d3ad2f77a77739581a148",
+    "mmproj_sha256": "fc2ebf4c44528daa2cea7b39891712847ca5e4f87dcf578054a06c46bfe6da27",
+    "matches_local_baseline": false
+  },
+  "phase2": "completed",
+  "setup": {
+    "nvidia_container_toolkit": "1.20.0-1",
+    "gpu_container_probe": "NVIDIA GB10, driver 580.142",
+    "cuda_matmul": "passed after checkpoint page-cache eviction",
+    "image_digest": "sha256:2970dd3c8fd00bccbc663345f9b4d87b35c491f4b13a2a4cdef60fe5c015f6e2",
+    "model_revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+    "model_total_bytes": 51644310215,
+    "torch": "2.10.0+cu130",
+    "vllm": "0.19.1.dev6+g6d4a8e6d2",
+    "worker_pid": 33496,
+    "gpu_memory_utilization": 0.25,
+    "original_gpu_memory_utilization": 0.4,
+    "override_reason": "Original preflight required 48.68 GiB; device had 32.95 GiB available",
+    "weights_verified": true
+  },
+  "results": {
+    "correct": 280,
+    "total": 300,
+    "accuracy": 0.9333333333333333,
+    "local_accuracy": 0.9266666666666666,
+    "within_predefined_tolerance": true,
+    "report": "phase2-results.md"
+  },
+  "final_health_check": {
+    "checked_at": "2026-09-15T11:53:53.255589+00:00",
+    "http_health": 200,
+    "model_ids": [
+      "/workspace/llm_model"
+    ],
+    "container_status": "running",
+    "restart_count": 0,
+    "note": "Transient post-run HTTP/SSH timeouts recovered on recheck; no service restart was performed."
+  }
+}

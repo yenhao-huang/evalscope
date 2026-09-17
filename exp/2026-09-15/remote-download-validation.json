@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+  "verified_files": [
+    "chat_template.jinja",
+    "config.json",
+    "generation_config.json",
+    "model-00001-of-00002.safetensors",
+    "model-00002-of-00002.safetensors",
+    "model.safetensors.index.json",
+    "processor_config.json",
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ]
+}

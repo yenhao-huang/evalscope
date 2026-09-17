@@ -31,3 +31,5 @@ All nine datasets converted: 21,307 rows total. Evaluated 1,100 samples: Pokemon
 | CPPE-5 | 48 / 100 |
 
 MMLU is entirely abstract_algebra, not 57-subject MMLU. Current text cohorts differ from the historical random-100 samples. GSM8K v1.0 lexical matching scored 92/100; Decimal numerical equivalence fixes five formatting false negatives, preserving legacy_numeric_string=0.92. CPPE-5 is class-set equality, not bounding-box mAP.
+
+Evidence: exp/2026-09-15/local-results.md, local-final-validation.json, local-suite-100-v1_1.json and local-pokemon-300-v1_1.json. CI and Dependabot are configured locally; activation awaits a code push. Phase 2 also completed: DGX PokemonCards 280/300 versus local 278/300; see issue #2 and phase2-results.md. This issue remains open for review.

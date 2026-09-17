@@ -1,0 +1,26 @@
+services:
+  gemma-4-26B-A4B-it:
+    command:
+    - --dtype
+    - auto
+    - --quantization
+    - bitsandbytes
+    - --model
+    - /workspace/llm_model
+    - --max-model-len
+    - '8196'
+    - --reasoning-parser
+    - gemma4
+    - --gpu-memory-utilization
+    - '0.25'
+    - --enable-auto-tool-choice
+    - --tool-call-parser
+    - hermes
+    - --max-num-seqs
+    - '2'
+    - --trust-remote-code
+    - --enable-prefix-caching
+    - --kv_cache_dtype
+    - fp8
+    - --quantization
+    - fp8

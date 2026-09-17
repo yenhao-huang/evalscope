@@ -1,0 +1,67 @@
+{
+  "captured_at": "2026-09-15T11:35:59.817144+00:00",
+  "ssh_target": "wingene@100.109.182.22",
+  "container": "evalscope-phase2-20260915-gemma-4-26B-A4B-it-1",
+  "image_id": "sha256:db59febc6c476c9c93701cc9f54917533cee774d4e4bb27eff6fafeae37509f8",
+  "image_reference": "vllm/vllm-openai:gemma4-cu130",
+  "command": [
+    "--dtype",
+    "auto",
+    "--quantization",
+    "bitsandbytes",
+    "--model",
+    "/workspace/llm_model",
+    "--max-model-len",
+    "8196",
+    "--reasoning-parser",
+    "gemma4",
+    "--gpu-memory-utilization",
+    "0.25",
+    "--enable-auto-tool-choice",
+    "--tool-call-parser",
+    "hermes",
+    "--max-num-seqs",
+    "2",
+    "--trust-remote-code",
+    "--enable-prefix-caching",
+    "--kv_cache_dtype",
+    "fp8",
+    "--quantization",
+    "fp8"
+  ],
+  "devices": [
+    {
+      "Driver": "nvidia",
+      "Count": 0,
+      "DeviceIDs": [
+        "0"
+      ],
+      "Capabilities": [
+        [
+          "gpu"
+        ]
+      ],
+      "Options": null
+    }
+  ],
+  "started_at": "2026-09-15T11:24:23.931469299Z",
+  "restart_count": 0,
+  "model_repo": "google/gemma-4-26B-A4B-it",
+  "model_revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+  "model_file_manifest": "remote-hf-manifest.json",
+  "model_file_validation": "remote-download-validation.json",
+  "weight_format": "official BF16 safetensors, online FP8 in vLLM",
+  "compute_dtype": "bfloat16",
+  "kv_cache_dtype": "fp8",
+  "model_loaded_gib": 25.67,
+  "load_seconds": 424.949902,
+  "gpu": "NVIDIA GB10",
+  "driver": "580.142",
+  "torch": "2.10.0+cu130",
+  "vllm": "0.19.1.dev6+g6d4a8e6d2",
+  "cuda": "13.0",
+  "original_yaml_sha256": "aad145c30d12d8d7513bab9af2556d3bffe2bda9e1f7698afbef0f81d052954c",
+  "override_sha256": "d4694313497a6fa5b9873bf6b3b4aab83d9511f0e8abac512b73439a7c11574b",
+  "memory_override_reason": "0.4 requested 48.68 GiB but only 32.95 GiB was available at startup; use 0.25",
+  "comparison_scope": "Frozen requests across different deployment backends and quantization; not an isolated hardware speed experiment"
+}

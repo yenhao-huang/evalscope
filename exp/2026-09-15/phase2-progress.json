@@ -1,0 +1,37 @@
+{
+  "started_at": "2026-09-15T11:24:17.950065+00:00",
+  "status": "completed",
+  "stage": "completed",
+  "updated_at": "2026-09-15T11:44:48.868527+00:00",
+  "resource_override_sha256": "d4694313497a6fa5b9873bf6b3b4aab83d9511f0e8abac512b73439a7c11574b",
+  "model_info": {
+    "object": "list",
+    "data": [
+      {
+        "id": "/workspace/llm_model",
+        "object": "model",
+        "created": 1789472016,
+        "owned_by": "vllm",
+        "root": "/workspace/llm_model",
+        "parent": null,
+        "max_model_len": 8196,
+        "permission": [
+          {
+            "id": "modelperm-b8345176176f76f8",
+            "object": "model_permission",
+            "created": 1789472016,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  }
+}

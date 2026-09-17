@@ -1,0 +1,66 @@
+{
+  "repo": "google/gemma-4-26B-A4B-it",
+  "revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+  "files": [
+    {
+      "rfilename": "chat_template.jinja",
+      "blobId": "4741bf6e4132ba23a5537f9d6e74e9a6d613d7cd",
+      "size": 18683
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "f42adcca257bb0865c506947671e7d0af52ac9c4",
+      "size": 3815
+    },
+    {
+      "rfilename": "generation_config.json",
+      "blobId": "e605bb4523b1462ea9d9a3810b9e3ecf7ab7b1f6",
+      "size": 208
+    },
+    {
+      "rfilename": "model-00001-of-00002.safetensors",
+      "blobId": "2b813216506c6b8266f174ac81c93629b499362e",
+      "size": 49907246508,
+      "lfs": {
+        "sha256": "1127684971bbca40465435a5cad69d67ad603bf5e61c6dfd5561fae4a3bcfdb3",
+        "size": 49907246508,
+        "pointerSize": 136
+      }
+    },
+    {
+      "rfilename": "model-00002-of-00002.safetensors",
+      "blobId": "43fd225b228774659bcb8948b8ad1b07b10cb53f",
+      "size": 1704763408,
+      "lfs": {
+        "sha256": "aab47033e1e8a492ef8e581efae1cf36478d0433567e7729b3c1728bc8970db7",
+        "size": 1704763408,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model.safetensors.index.json",
+      "blobId": "889ab10e12aca96c43c9804a041fb1780de1e5ca",
+      "size": 103196
+    },
+    {
+      "rfilename": "processor_config.json",
+      "blobId": "5465974d23e1eca2c46c2809b26c997946ce0d90",
+      "size": 1689
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "1ff9f3e3439a939b971f9919e821bf87e835a503",
+      "size": 32169626,
+      "lfs": {
+        "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+        "size": 32169626,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "6068e357379d36f823c377e30efb101fa2c67fe4",
+      "size": 3082
+    }
+  ]
+}

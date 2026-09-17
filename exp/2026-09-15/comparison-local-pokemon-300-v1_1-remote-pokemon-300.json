@@ -1,0 +1,160 @@
+{
+  "local": "local-pokemon-300-v1_1",
+  "remote": "remote-pokemon-300",
+  "subset": "pokemon",
+  "local_model_info": {
+    "models": [
+      {
+        "name": "gemma4-26b-a4b",
+        "model": "gemma4-26b-a4b",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion",
+          "multimodal"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "gemma4-26b-a4b",
+        "aliases": [
+          "gemma4-26b-a4b"
+        ],
+        "tags": [],
+        "object": "model",
+        "created": 1789459757,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 262144,
+          "n_ctx": 8192,
+          "n_ctx_train": 262144,
+          "n_embd": 2816,
+          "n_params": 25233142046,
+          "size": 17129196664,
+          "ftype": "Q4_K - Medium"
+        }
+      }
+    ]
+  },
+  "remote_model_info": {
+    "object": "list",
+    "data": [
+      {
+        "id": "/workspace/llm_model",
+        "object": "model",
+        "created": 1789472018,
+        "owned_by": "vllm",
+        "root": "/workspace/llm_model",
+        "parent": null,
+        "max_model_len": 8196,
+        "permission": [
+          {
+            "id": "modelperm-bb00def1adda65f3",
+            "object": "model_permission",
+            "created": 1789472018,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "performance": {
+    "local": {
+      "latency_seconds": {
+        "mean": 4.070869,
+        "median": 4.138442,
+        "p90": 4.469249,
+        "p99": 4.750914
+      },
+      "measurement_coverage": {
+        "requests_with_metrics": 300,
+        "total_requests": 300
+      },
+      "execution": {
+        "requested": 300,
+        "succeeded": 300,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "pokemon": {
+            "requested": 300,
+            "succeeded": 300,
+            "errored": 0
+          }
+        }
+      },
+      "note": "End-to-end request latency includes image processing and network overhead, not pure decode speed."
+    },
+    "remote": {
+      "latency_seconds": {
+        "mean": 2.212961,
+        "median": 1.941655,
+        "p90": 2.996141,
+        "p99": 3.459467
+      },
+      "measurement_coverage": {
+        "requests_with_metrics": 300,
+        "total_requests": 300
+      },
+      "execution": {
+        "requested": 300,
+        "succeeded": 300,
+        "errored": 0,
+        "incomplete": false,
+        "subsets": {
+          "pokemon": {
+            "requested": 300,
+            "succeeded": 300,
+            "errored": 0
+          }
+        }
+      },
+      "note": "End-to-end request latency includes image processing and network overhead, not pure decode speed."
+    },
+    "mean_latency_remote_over_local": 0.5436089935588692
+  },
+  "n": 300,
+  "local_accuracy": 0.9266666666666666,
+  "remote_accuracy": 0.9333333333333333,
+  "remote_minus_local": 0.006666666666666667,
+  "paired_bootstrap_95_interval": [
+    0.0,
+    0.016666666666666666
+  ],
+  "bootstrap_seed": 42,
+  "bootstrap_resamples": 10000,
+  "correctness_agreement": 0.9933333333333333,
+  "local_only_correct": 0,
+  "remote_only_correct": 2,
+  "tolerance": 0.05,
+  "within_tolerance": true,
+  "interpretation": "Paired bootstrap describes this sample set, not universal model equivalence."
+}
