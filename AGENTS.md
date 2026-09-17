@@ -175,3 +175,9 @@ make dev      # once
 make lint     # apply fixes and run all checks before every commit
 pytest tests/cli/test_all.py::TestRun::test_ci_lite -v -s -p no:warnings
 ```
+
+## Personal fork workflow
+
+This fork maintains reproducible local and remote model evaluation. Before work, read `docs/feature-list.md`. Read `docs/rules/filetree.md` before directory changes, `docs/rules/environment.md` before environment or service changes, and `docs/rules/git.md` before git operations.
+
+All experiments MUST live under `exp/<exp-name>/`; the initial experiment is `exp/2026-09-15/`. The only project virtual environment is root `.venv/`. Follow the git rules in docs, preserve all upstream requirements above, and update feature status and experiment evidence as work progresses.
