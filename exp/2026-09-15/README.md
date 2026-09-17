@@ -1,6 +1,6 @@
 # Gemma / EvalScope 評估 — 2026-09-15
 
-> Historical adapter-based experiment. Its runnable code is preserved at Git commit `60c1e98f`; the scripts below describe that version. Current native-interface conversions and reruns are documented in [2026-09-17](../2026-09-17-native-interfaces/README.md).
+> Historical adapter-based experiment. Its runnable code is preserved at Git commit `60c1e98f` (published identical tree: `667e878b`); the scripts below describe that version. Current native-interface conversions and reruns are documented in [2026-09-17](../2026-09-17-native-interfaces/README.md).
 
 ## 狀態
 

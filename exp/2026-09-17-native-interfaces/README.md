@@ -34,4 +34,8 @@
 
 第一輪 smoke 發現原生 BLEU 缺少 `punkt_tab`，失敗記錄 `native-smoke.json` 保留；在根 `.venv/nltk_data` 補齊後另用 `native-smoke-validated` 完整重跑成功，不將錯誤分數算成成功。
 
-舊實驗完整保留於 `exp/2026-09-15/`，其可執行程式版本為 Git commit `60c1e98f`。本輪不更動舊數值與原始回答。
+舊實驗完整保留於 `exp/2026-09-15/`，其可執行程式版本為 Git commit `60c1e98f` (published identical tree: `667e878b`)。本輪不更動舊數值與原始回答。
+
+## DGX 新推論已完成
+
+原生 general_vqa 新推論 300/300 成功、0 錯誤；逐筆圖片、提示詞與目標稽核通過。獨立 JSON name/hp 正確率 280/300（93.33%）；原生 ROUGE-L Recall 26.35%、BLEU-4 35.27%。不同指標分開記錄，不能互換。完整本機九項與配對比較仍在執行中。
